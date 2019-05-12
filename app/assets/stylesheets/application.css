@@ -3,8 +3,30 @@
 body {
   padding-top: 70px;
   color: #555555;
+  background: #8b1c48;
 }
 
 .navbar-toggle {
   padding: 5px 10px 0px 9px;
+}
+
+.top-title {
+  color: #fff;
+  margin-top: 20%;
+  margin-bottom: 10%;
+}
+
+.top-contents {
+  color: #fff;
+}
+
+.top-btn {
+  border: 1px solid #fff;
+  padding: 10px 16px;
+  margin: 10px;
+}
+
+.top-btn:hover {
+  color: #8b1c48;
+  background: #fff;
 }
