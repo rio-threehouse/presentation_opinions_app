@@ -1,0 +1,27 @@
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="jumbotron">
+      <div class="text-center">
+        <i class="fas fa-user-plus"></i>
+        <p>アカウント作成</p>
+      </div>
+
+      <%= form_for(@user) do |f| %>
+        <div class="form-group">
+          <%= f.label :name, '名前' %>
+          <%= f.text_field :name, class: 'form-control', placeholder: '漢字フルネーム' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :name_confirmation, '名前の確認' %>
+          <%= f.text_field :name_confirmation, class: 'form-control', placeholder: '上記と同じ名前を記入' %>
+        </div>
+
+        <div class="text-center">
+          <%= f.submit 'アカウントを作成する', class: 'btn top-btn'%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
