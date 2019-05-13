@@ -23,6 +23,7 @@ body {
   border-radius: 0px;
   padding: 10px 16px;
   margin: 10px;
+  text-decoration: none;
 }
 
 .top-btn:hover {
