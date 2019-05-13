@@ -1,0 +1,8 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザ
+    attributes:
+      user:
+        name: 名前
+        name_confirmation: 名前の確認
