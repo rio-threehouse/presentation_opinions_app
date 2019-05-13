@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       flash[:success] = 'アカウントを作成しました'
       redirect_to root_url
     else
-      flash[:danger] = 'アカウントの作成に失敗しました'
+      flash[:danger] = 'アカウントの登録に失敗しました'
       render :new
     end
   end
