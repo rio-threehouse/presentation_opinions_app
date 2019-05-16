@@ -5,4 +5,6 @@ ja:
     attributes:
       user:
         name: 名前
-        name_confirmation: 確認
+        name_confirmation: 名前確認
+        password: パスワード
+        password_confirmation: パスワード確認

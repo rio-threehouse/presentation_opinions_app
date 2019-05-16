@@ -14,21 +14,30 @@
           <%= f.label :name, '名前' %>
           <%= f.text_field :name, class: 'form-control', placeholder: 'ex.自由花子（漢字フルネーム）' %>
         </div>
+        <ul class="text-muted">
+          <li>アンケートの回答は匿名式です</li>
+          <li>必ず本名のフルネームでアカウントを登録してください</li>
+        </ul>
 
         <div class="form-group">
-          <%= f.label :name_confirmation, '確認' %>
+          <%= f.label :name_confirmation, '名前確認' %>
           <%= f.text_field :name_confirmation, class: 'form-control', placeholder: '上記と同じ名前を記入' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password, 'パスワード'%>
+          <%= f.password_field :password, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password_confirmation, 'パスワード確認' %>
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
         </div>
 
         <div class="text-center">
           <%= f.submit 'アカウントを登録する', class: 'btn top-btn'%>
         </div>
       <% end %>
-
-      <ul class="text-muted">
-        <li>アンケートの回答は匿名式です。</li>
-        <li>必ず本名のフルネームでアカウントを登録してください</li>
-      </ul>
     </div>
   </div>
 </div>
