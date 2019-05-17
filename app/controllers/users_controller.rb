@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :require_user_logged_in, only:[:edit, :update, :destroy]
   def new
     @user = User.new
   end
@@ -8,9 +9,9 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:success] = 'アカウントを作成しました'
-      redirect_to root_url
+      redirect_to login_url
     else
-      flash[:danger] = 'アカウントの登録に失敗しました'
+      flash.now[:danger] = 'アカウントの登録に失敗しました'
       render :new
     end
   end

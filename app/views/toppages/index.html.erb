@@ -1,17 +1,19 @@
-<div class="text-center">
+<% if logged_in? %>
 
-  <div class="top-title">
-    <h4>自由学園</h4>
-    <h2 style="margin-top:0px">報告会アンケート</h2>
-  </div>
+<% else %>
+  <div class="text-center">
 
-  <div class="jumbotron">
-    <i class="fas fa-user-plus"></i>
-    <div>アンケートに参加する</div>
-    <%= link_to 'アカウント登録', signup_path, class: 'btn top-btn' %>
-    <div class="btn top-btn">
-      ログイン
+    <div class="top-title">
+      <h4>自由学園</h4>
+      <h2 style="margin-top:0px">報告会アンケート</h2>
     </div>
+
+    <div class="jumbotron">
+      <i class="fas fa-user-plus"></i>
+      <div>アンケートに参加する</div>
+      <%= link_to 'アカウント登録', signup_path, class: 'btn top-btn' %>
+      <%= link_to 'ログイン', login_path, class: 'btn top-btn'%>
+    </div>
+    
   </div>
-  
-</div>
+<% end %>

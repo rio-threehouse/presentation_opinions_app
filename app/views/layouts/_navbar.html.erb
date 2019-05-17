@@ -13,8 +13,21 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to 'アカウント登録', signup_path %></li>
-          <li><a href="#">ログイン</a></li>
+          <% if logged_in? %>
+            <li>
+              <%= link_to root_path do %>
+                <i class="fas fa-list"></i> 報告会一覧
+              <% end %>
+            </li>
+            <li>
+              <%= link_to logout_path, method: :delete do %>
+                <i class="fas fa-sign-out-alt"></i> ログアウト
+              <% end %>
+            </li>
+          <% else %>
+            <li><%= link_to 'アカウント登録', signup_path %></li>
+            <li><%= link_to 'ログイン', login_path %></li>
+          <% end %>
         </ul>
       </div>
     </div>

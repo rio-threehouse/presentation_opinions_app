@@ -1,0 +1,28 @@
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="jumbotron">
+      <div class="text-center">
+        <i class="fas fa-user-check"></i>
+        <p>ログイン</p>
+      </div>
+
+      <%= form_for(:session, url:login_path) do |f| %>
+        <div class="form-group">
+
+          <%= f.label :name, '名前' %>
+          <%= f.text_field :name, class: 'form-control', placeholder: 'ex.自由花子（漢字フルネーム）' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password, 'パスワード'%>
+          <%= f.password_field :password, class: 'form-control' %>
+        </div>
+
+        <div class="text-center">
+          <%= f.submit 'ログイン', class: 'btn top-btn'%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
