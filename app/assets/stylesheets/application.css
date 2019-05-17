@@ -6,6 +6,7 @@ body {
   background: #8b1c48;
 }
 
+/* メニューボタン */
 .navbar-toggle {
   padding: 5px 10px 0px 9px;
 }
@@ -16,7 +17,8 @@ body {
   margin-bottom: 40px;
 }
 
-.top-btn {
+/* 基本ボタン */
+.nomal-btn {
   color: #8b1c48;
   background: #fff;
   border: 1px solid #8b1c48;
@@ -26,7 +28,7 @@ body {
   text-decoration: none;
 }
 
-.top-btn:hover {
+.nomal-btn:hover {
   color: #fff;
   background: #8b1c48;
 }

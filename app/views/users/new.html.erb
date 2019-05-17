@@ -12,7 +12,7 @@
           <%= render 'layouts/error_messages', model: f.object %>
 
           <%= f.label :name, '名前' %>
-          <%= f.text_field :name, class: 'form-control', placeholder: 'ex.自由花子（漢字フルネーム）' %>
+          <%= f.text_field :name, class: 'form-control', placeholder: 'ex.自由花子（漢字フルネーム）', required: true %>
         </div>
         <ul class="text-muted">
           <li>アンケートの回答は匿名式です</li>
@@ -21,21 +21,21 @@
 
         <div class="form-group">
           <%= f.label :name_confirmation, '名前確認' %>
-          <%= f.text_field :name_confirmation, class: 'form-control', placeholder: '上記と同じ名前を記入' %>
+          <%= f.text_field :name_confirmation, class: 'form-control', placeholder: '上記と同じ名前を記入', required: true %>
         </div>
 
         <div class="form-group">
           <%= f.label :password, 'パスワード'%>
-          <%= f.password_field :password, class: 'form-control' %>
+          <%= f.password_field :password, class: 'form-control', required: true %>
         </div>
 
         <div class="form-group">
           <%= f.label :password_confirmation, 'パスワード確認' %>
-          <%= f.password_field :password_confirmation, class: 'form-control' %>
+          <%= f.password_field :password_confirmation, class: 'form-control', required: true %>
         </div>
 
         <div class="text-center">
-          <%= f.submit 'アカウントを登録する', class: 'btn top-btn'%>
+          <%= f.submit 'アカウントを登録する', class: 'btn nomal-btn'%>
         </div>
       <% end %>
     </div>
