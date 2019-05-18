@@ -4,6 +4,8 @@ body {
   padding-top: 70px;
   color: #555555;
   background: #8b1c48;
+
+  word-wrap: break-word;
 }
 
 /* メニューボタン */
@@ -31,4 +33,58 @@ body {
 .nomal-btn:hover {
   color: #fff;
   background: #8b1c48;
+}
+
+/* パネル */
+.panel-heading {
+  border-bottom: 1px dashed;
+}
+
+.panel-body {
+  padding: 0px;
+}
+
+.panel-body ul {
+  padding: 0px;
+}
+
+.panel-body li {
+  list-style: none;
+  padding: 10px;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+/* 報告会フォームボタン */
+.fixed_btn {
+  position: fixed;
+  bottom: 40px; 
+  right: 9%;
+
+  color: #8b1c48;
+  font-size: 20px;
+  background: #fff;
+  padding: 13px;
+  border-radius: 50%;
+  border: 1px solid #8b1c48;
+}
+
+footer {
+  display: block;
+  height: 100px;
+}
+
+/* ページネーション */
+.pagination>.active>a {		
+  background: #8b1c48;	
+  border-color: #8b1c48;	
+  border-radius:15px;		
+}
+
+.pagination>li>a {			
+  border: none;				
+  color: #696969;	
+}
+
+.pagination>li>a:hover {		
+  border-radius:15px;		
 }

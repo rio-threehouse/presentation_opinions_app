@@ -3,4 +3,6 @@ class User < ApplicationRecord
   validates :name_confirmation, presence: true
   
   has_secure_password
+
+  has_many :mains, dependent: :destroy
 end
