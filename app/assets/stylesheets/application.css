@@ -30,6 +30,16 @@ body {
   text-decoration: none;
 }
 
+/* 削除ボタン */
+.delete-btn {
+  font-size: 11px;
+
+  color: #ca0101;
+  background: #fff;
+  border: 1px solid #ff0000;
+  padding: 3px;
+}
+
 .nomal-btn:hover {
   color: #fff;
   background: #8b1c48;
