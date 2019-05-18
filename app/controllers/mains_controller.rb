@@ -1,7 +1,7 @@
 class MainsController < ApplicationController
   before_action :require_user_logged_in
   before_action :main_correct_user, only:[:update, :destroy]
-  
+
   def show
   end
 
@@ -12,7 +12,7 @@ class MainsController < ApplicationController
       flash[:success] = '報告会を追加しました'
       redirect_to root_url
     else
-      @mains = Main.all.order("created_at DESC").page(params[:page])
+      @mains = Main.all.order("date DESC").page(params[:page]).per(8)
       flash[:danger] = '報告会の追加に失敗しました'
       render 'toppages/index'
     end
