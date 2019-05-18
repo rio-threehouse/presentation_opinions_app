@@ -14,14 +14,12 @@
                   <%= main.date.strftime('%Y/%m/%d') %>
                   <i class="far fa-clock"></i> <%= main.time %>
                 </span>
-                <% if main.user == current_user %>
-                  <%= link_to main_path(main), method: :delete, data: {confirm: "この報告会に関連する内容も全て削除されます。本当に削除しますか？"} do %>
-                    <span class="delete-btn pull-right">
-                      削除
-                    </span>
+                <span class="pull-right">
+                  <% if main.user == current_user %>
+                    <%= link_to '変更', edit_main_path(main), class: 'edit-btn' %>
+                    <%= link_to '削除', main_path(main), class: 'delete-btn', method: :delete, data: {confirm: "この報告会に関連する内容も全て削除されます。本当に削除しますか？"} %>
                   <% end %>
-                <% end %>
-
+                </span>
                 <h4><%= link_to main.title, main_path(main) %></h4>
                 <div class="text-muted" style="text-align: right"><i class="fas fa-user-edit"></i><%= main.user.name %></div>
               </li>          
@@ -47,32 +45,7 @@
           <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
           <h4 class="modal-title text-center">報告会を追加</h4>
         </div>
-        <%= form_for(@main) do |f| %>
-          <div class="modal-body">
-            <div class="form-group">
-              <%= f.label :title, '報告会名' %> <span class="text-muted">（最大50文字）</span>
-              <%= f.text_field :title, class: 'form-control', required: true %>
-            </div>
-
-            <div class="form-group">
-              <%= f.label :date, '日程' %> <span class="text-muted">（タップすると表示される▼を押して日程を選択）</span>
-              <%= f.date_field :date, class: 'form-control', required: true %>
-            </div>
-
-            <div class="form-group">
-              <%= f.label :time, '時間' %> <span class="text-muted">（最大10文字）</span>
-              <%= f.text_field :time, class: 'form-control', placeholder: 'ex.1限', required: true %>
-            </div>
-          </div>
-
-          <div class="modal-footer">
-            <div class="text-rmuted" style="text-align: left">
-              ※追加した報告会の情報変更、削除は<%= current_user.name %>さんのみ行うことができます
-            </div>
-
-            <%= f.submit '追加する', class: 'btn nomal-btn' %>
-          </div>
-        <% end %>
+        <%= render 'mains/main_form', main: @main %>
       </div>
     </div>
   </div>

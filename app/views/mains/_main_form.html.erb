@@ -1,0 +1,26 @@
+<%= form_for(main) do |f| %>
+  <div class="modal-body">
+    <div class="form-group">
+      <%= f.label :title, '報告会名' %> <span class="text-muted small">（最大50文字）</span>
+      <%= f.text_field :title, class: 'form-control', required: true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :date, '日程' %> <span class="text-muted small">（タップすると表示される▼を押して日程を選択）</span>
+      <%= f.date_field :date, class: 'form-control', required: true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :time, '時間' %> <span class="text-muted small">（最大10文字）</span>
+      <%= f.text_field :time, class: 'form-control', placeholder: 'ex.1限', required: true %>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <div class="text-rmuted" style="text-align: left">
+      ※登録した報告会の情報変更、削除は<%= current_user.name %>さんのみ行うことができます
+    </div>
+
+    <%= f.submit '登録する', class: 'btn nomal-btn' %>
+  </div>
+<% end %>

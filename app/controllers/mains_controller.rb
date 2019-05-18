@@ -1,6 +1,6 @@
 class MainsController < ApplicationController
   before_action :require_user_logged_in
-  before_action :main_correct_user, only:[:update, :destroy]
+  before_action :main_correct_user, only:[:edit, :update, :destroy]
 
   def show
   end
@@ -18,7 +18,18 @@ class MainsController < ApplicationController
     end
   end
 
+  def edit
+    @main = Main.find_by(id: params[:id])
+  end
+
   def update
+    if @main.update(main_params)
+      flash[:success] = '報告会の内容を変更しました'
+      redirect_to edit_main_url(@main)
+    else
+      flash[:danger] = '報告会の内容変更に失敗しました'
+      render :edit
+    end
   end
 
   def destroy
