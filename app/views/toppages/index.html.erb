@@ -1,37 +1,42 @@
 <% if logged_in? %>
-  <div class="panel">
-    <div class="panel-heading text-center">
-      <i class="fas fa-list"></i> 報告会一覧
-    </div>
-    <div class="panel-body">
-      <ul>
-        <% @mains.each do |main| %>
-          <li>
-            <span class="text-muted">
-              <%= main.date.strftime('%Y/%m/%d') %>
-              <i class="far fa-clock"></i> <%= main.time %>
-            </span>
-            <% if main.user == current_user %>
-              <%= link_to main_path(main), method: :delete, data: {confirm: "この報告会に関連する内容も全て削除されます。本当に削除しますか？"} do %>
-                <span class="delete-btn pull-right">
-                  削除
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="panel">
+        <div class="panel-heading text-center">
+          <i class="fas fa-list"></i> 報告会一覧
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li><i class="fas fa-plus sample-btn"></i> を押して報告会を追加する</li>
+            <% @mains.each do |main| %>
+              <li>
+                <span class="text-muted">
+                  <%= main.date.strftime('%Y/%m/%d') %>
+                  <i class="far fa-clock"></i> <%= main.time %>
                 </span>
-              <% end %>
-            <% end %>
+                <% if main.user == current_user %>
+                  <%= link_to main_path(main), method: :delete, data: {confirm: "この報告会に関連する内容も全て削除されます。本当に削除しますか？"} do %>
+                    <span class="delete-btn pull-right">
+                      削除
+                    </span>
+                  <% end %>
+                <% end %>
 
-            <h4><%= link_to main.title, main_path(main) %></h4>
-            <div class="text-muted" style="text-align: right"><i class="fas fa-user-edit"></i><%= main.user.name %></div>
-          </li>          
-        <% end %>
-      </ul>
-    </div>
-    <div class="text-center">
-      <%= paginate @mains%>
+                <h4><%= link_to main.title, main_path(main) %></h4>
+                <div class="text-muted" style="text-align: right"><i class="fas fa-user-edit"></i><%= main.user.name %></div>
+              </li>          
+            <% end %>        
+          </ul>           
+        </div>
+        <div class="text-center">
+          <%= paginate @mains%>
+        </div>
+      </div>
     </div>
   </div>
 
 <%# 報告会追加フォーム(固定ボタン) %>
-  <button type="button" class="fixed_btn" data-toggle="modal" data-target="#post-form">
+  <button type="button" class="fixed-btn" data-toggle="modal" data-target="#post-form">
     <i class="fas fa-plus"></i>
   </button>
 
