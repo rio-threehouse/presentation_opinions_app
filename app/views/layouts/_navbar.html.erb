@@ -20,6 +20,11 @@
               <% end %>
             </li>
             <li>
+              <%= link_to edit_user_path(current_user) do %>
+                <i class="fas fa-user-cog"></i> アカウント設定
+              <% end %>
+            </li>
+            <li>
               <%= link_to logout_path, method: :delete do %>
                 <i class="fas fa-sign-out-alt"></i> ログアウト
               <% end %>

@@ -1,2 +1,46 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="jumbotron">
+      <div class="text-center">
+        <i class="fas fa-user-cog"></i>
+        <p>アカウント情報の変更</p>
+      </div>
+
+      <%= form_for(current_user) do |f| %>
+        <%= render 'layouts/error_messages', model: f.object %>
+        <div class="form-group">
+
+          <%= f.label :name, '名前' %>
+          <%= f.text_field :name, class: 'form-control', placeholder: 'ex.自由花子（漢字フルネーム）', required: true %>
+        </div>
+        
+        <div class="form-group">
+          <%= f.label :name_confirmation, '名前確認' %>
+          <%= f.text_field :name_confirmation, class: 'form-control', placeholder: '上記と同じ名前を記入', required: true %>
+        </div>
+
+        <p>
+          <button type="button" class="btn btn-block" data-toggle="collapse" data-target="#password">
+            パスワードを変更
+          </button>
+        </p>
+        <div class="collapse" id="password">
+          <div class="form-group">
+            <%= f.label :password, 'パスワード'%>
+            <%= f.password_field :password, class: 'form-control', placeholder: '空欄の場合パスワードは変わりません' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :password_confirmation, 'パスワード確認' %>
+            <%= f.password_field :password_confirmation, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <%= f.submit '変更する', class: 'btn nomal-btn'%>
+        </div>
+      <% end %>
+      <%= link_to '←報告会一覧へ', root_path %>
+    </div>
+  </div>
+</div>
