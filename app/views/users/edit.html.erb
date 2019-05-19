@@ -39,8 +39,9 @@
         <div class="text-center">
           <%= f.submit '変更する', class: 'btn nomal-btn'%>
         </div>
-      <% end %>
-      <%= link_to '←報告会一覧へ', root_path %>
+      <% end %>   
     </div>
+    <%= link_to '←報告会一覧へ', root_path, class: 'link' %>
+    <%= link_to 'アカウントを削除する', user_path(current_user), method: :delete, class: 'pull-right link', data: {confirm: "アカウントが削除されます。本当に削除しますか？"} %>
   </div>
 </div>

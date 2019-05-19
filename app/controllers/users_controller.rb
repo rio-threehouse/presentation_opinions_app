@@ -31,6 +31,9 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    current_user.destroy
+    flash[:danger] = 'アカウントを削除しました'
+    redirect_to root_url
   end
 
   private
