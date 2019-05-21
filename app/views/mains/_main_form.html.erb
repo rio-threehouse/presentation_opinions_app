@@ -20,6 +20,10 @@
       <%= f.label :time, '時間' %> <span class="text-muted small">（最大10文字）</span>
       <%= f.text_field :time, class: 'form-control', placeholder: 'ex.1限', required: true %>
     </div>
+    
+    <div>
+      登録者：<%= main.user.name %>
+    </div>
   </div>
 
   <div class="modal-footer">
