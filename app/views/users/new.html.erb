@@ -23,6 +23,17 @@
           <%= f.text_field :name_confirmation, class: 'form-control', placeholder: '上記と同じ名前を記入', required: true %>
         </div>
 
+        <%# researchのフォーム %>
+        <div class="form-group">
+         <%= f.label :research, '所属'%>
+         <%= f.select :research, [['農芸','農芸'],['樹木','樹木'],['草本・潅木','草本・潅木'],
+                                  ['食','食'],['図書・記録資料','図書・記録資料'],['資源・エネルギー','資源・エネルギー'],
+                                  ['フィールドサイエンス','フィールド'],['ヒューマンサイエンス','ヒューマンサイエンス'],
+                                  ['データサイエンス','データサイエンス'],['ライフスタイル','ライフスタイル'],
+                                  ['マネジメント','マネジメント'],['教職員','教職員']],
+                                  class: 'form-control', :prompt => "選択してください" %>
+        </div>
+
         <div class="form-group">
           <%= f.label :password, 'パスワード'%>
           <%= f.password_field :password, class: 'form-control', required: true %>
