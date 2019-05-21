@@ -49,6 +49,10 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
   database: jiyu_presentation_opinions_production
   username: jiyu_presentation_opinions
   password: <%= ENV['JIYU_PRESENTATION_OPINIONS_DATABASE_PASSWORD'] %>
