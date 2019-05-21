@@ -4,7 +4,7 @@ class CreateMains < ActiveRecord::Migration[5.0]
       t.string :title
       t.date :date
       t.string :time
-      t.string :group
+      t.integer :group
       t.references :user, foreign_key: true
 
       t.timestamps

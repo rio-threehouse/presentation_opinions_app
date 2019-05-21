@@ -41,7 +41,7 @@ class MainsController < ApplicationController
   private
 
   def main_params
-    params.require(:main).permit(:title, :date, :time)
+    params.require(:main).permit(:title, :date, :time, :group)
   end
 
   def main_correct_user

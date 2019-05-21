@@ -20,7 +20,14 @@
                     <%= link_to '削除', main_path(main), class: 'delete-btn', method: :delete, data: {confirm: "この報告会に関連する内容も全て削除されます。本当に削除しますか？"} %>
                   <% end %>
                 </span>
-                <h4><%= link_to main.title, main_path(main) %></h4>
+                <div class="main-group">
+                  <% if main.group == 0 %>
+                    <span class='group-0'>卒業勉強・卒業研究</span>
+                  <% else %>
+                    <span class='group-1'>生活経営研究実習</span>
+                  <% end %>
+                </div>
+                <h3 class='main-title'><%= link_to main.title, main_path(main) %></h3>
                 <div class="text-muted" style="text-align: right"><i class="fas fa-user-edit"></i><%= main.user.name %></div>
               </li>          
             <% end %>        
@@ -56,7 +63,7 @@
     <div class="top-title">
       <div class="top-jiyu">自由学園</div>
       <h2 style="margin-top:0px">報告会アンケート</h2>
-      <h4>領域横断研究 / 生活経営研究実習</h4>
+      <h4>卒業勉強・卒業研究 / 生活経営研究実習</h4>
     </div>
 
     <div class="jumbotron">

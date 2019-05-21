@@ -6,7 +6,13 @@
     </div>
 
     <div class="form-group">
-      <%= f.label :date, '日程' %> <span class="text-muted small">（タップすると表示される▼を押して日程を選択）</span>
+      <%= f.label :group, 'グループ' %><br>
+      <%= f.radio_button :group, 0, required: true %> 卒業勉強・卒業研究
+      <%= f.radio_button :group, 1 %> 生活経営研究実習
+    </div>
+
+    <div class="form-group">
+      <%= f.label :date, '日程' %>
       <%= f.date_field :date, class: 'form-control', required: true %>
     </div>
 

@@ -163,3 +163,25 @@ footer {
 .link:hover {
   color: #fff;
 }
+
+/* mainのデザイン */
+.main-group {
+  margin-top:10px;
+  font-size: 12px;
+}
+
+.group-0 {
+  background: #d0faff;
+  padding: 5px;
+  border-radius: 6px;
+} 
+
+.group-1 {
+  background: #d0ffe2;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.main-title {
+  margin: 15px 0px 5px 15px;
+}
