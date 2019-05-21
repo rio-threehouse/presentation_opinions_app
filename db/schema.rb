@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20190517072326) do
     t.string   "title"
     t.date     "date"
     t.string   "time"
-    t.integer  "group"
+    t.string   "group"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
