@@ -13,10 +13,16 @@ body {
   padding: 5px 10px 0px 9px;
 }
 
+/* トップページデザイン */
 .top-title {
   color: #fff;
   margin-top: 20%;
   margin-bottom: 40px;
+}
+
+.top-jiyu {
+  margin-bottom:20px;
+  font-size:20px;
 }
 
 /* 基本ボタン */
