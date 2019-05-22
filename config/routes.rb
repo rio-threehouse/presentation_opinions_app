@@ -14,6 +14,6 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :presents, only:[:show, :create, :update, :destroy]
+  resources :presents, only:[:show, :create, :edit, :update, :destroy]
 
 end

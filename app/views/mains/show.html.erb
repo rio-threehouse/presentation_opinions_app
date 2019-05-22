@@ -17,6 +17,7 @@
             <li>
               <span class="pull-right">
                 <% if present.user == current_user %>
+                  <%= link_to '変更', edit_present_path(present), class: 'edit-btn' %>
                   <%# <%= link_to '削除', main_path(main), class: 'delete-btn', method: :delete, data: {confirm: "この報告会に関連する内容も全て削除されます。本当に削除しますか？"} %> %>
                 <% end %>
               </span>

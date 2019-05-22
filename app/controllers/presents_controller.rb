@@ -1,5 +1,5 @@
 class PresentsController < ApplicationController
-  before_action :present_correct_user, only:[:update, :destroy]
+  before_action :present_correct_user, only:[:edit, :update, :destroy]
 
   def show
   end
@@ -17,6 +17,9 @@ class PresentsController < ApplicationController
       flash.now[:danger] = '報告会内容の追加に失敗しました'
       render main
     end
+  end
+
+  def edit
   end
 
   def update
@@ -41,7 +44,7 @@ class PresentsController < ApplicationController
   def present_correct_user
     @present = current_user.presents.find_by(id: params[:id])
     unless @present
-      redirect_to main_url(@present.main)
+      redirect_to root_url
     end
   end
 end
