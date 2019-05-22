@@ -5,10 +5,32 @@ class MainsController < ApplicationController
   before_action :group1, only:[:group1]
 
   def show
-    @main = Main.find(params[:id])
-    @presents = Present.where(main_id: params[:id]).order("created_at DESC")
-    @present = current_user.presents.build
-    @current_user_present = @presents.find_by(user_id: current_user.id)
+    show_data
+  end
+
+  def field
+    show_data
+    @field_presents = @presents.where(research: 'field')
+  end
+
+  def human
+    show_data
+    @human_presents = @presents.where(research: 'human')
+  end
+
+  def data
+    show_data
+    @data_presents = @presents.where(research: 'data')
+  end
+
+  def life
+    show_data
+    @life_presents = @presents.where(research: 'life')
+  end
+
+  def manage
+    show_data
+    @manage_presents = @presents.where(research: 'manage')
   end
 
   def group1
@@ -51,6 +73,13 @@ class MainsController < ApplicationController
 
   def main_params
     params.require(:main).permit(:title, :date, :time, :group)
+  end
+  
+  def show_data
+    @main = Main.find(params[:id])
+    @presents = Present.where(main_id: params[:id]).order("created_at DESC")
+    @present = current_user.presents.build
+    @current_user_present = @presents.find_by(user_id: current_user.id)
   end
 
   def main_correct_user

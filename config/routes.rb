@@ -10,6 +10,12 @@ Rails.application.routes.draw do
 
   resources :mains, only: [:show, :create, :edit, :update, :destroy] do
     member do
+      get :field
+      get :human
+      get :data
+      get :life
+      get :manage
+      
       get :group1
     end
   end

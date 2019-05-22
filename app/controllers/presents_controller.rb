@@ -8,14 +8,15 @@ class PresentsController < ApplicationController
     present = current_user.presents.build(present_params)
     main = Main.find(params[:main_id])
     present.main_id = main.id
+    present.research = params[:research]
 
     if present.save
       flash[:success] = '報告内容を追加しました'
-      redirect_to main_url(main)
+      redirect_back(fallback_location: root_path)
     else
       @presents = Present.where(main_id: params[:id])
       flash[:danger] = '報告会内容の追加に失敗しました'
-      redirect_to main_url(main)
+      redirect_back(fallback_location: root_path)
     end
   end
 

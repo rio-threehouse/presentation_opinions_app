@@ -121,32 +121,30 @@ body {
   background: #fff;
   padding: 13px;
   border-radius: 50%;
-
-  box-shadow: 10px 10px 15px -10px;
 }
 
 .sample-b {
   color: #8b1c48;
-  border: 1px solid #8b1c48;
+  border: 3px solid #8b1c48;
 }
 
 .group-0-b {
   color: #4bb7ff;
-  border: 1px solid #4bb7ff;
+  border: 3px solid #4bb7ff;
 }
 
 .sample-btn {
   color: #8b1c48;
   padding: 5px;
   border-radius: 50%;
-  border: 1px solid #8b1c48;
+  border: 3px solid #8b1c48;
 }
 
 .group-0-btn {
   color: #4bb7ff;
   padding: 5px;
   border-radius: 50%;
-  border: 1px solid #4bb7ff;
+  border: 3px solid #4bb7ff;
 }
 
 footer {
@@ -199,4 +197,47 @@ footer {
 
 .main-title {
   margin: 15px 0px 5px 15px;
+}
+
+/* ゼミボタン */
+.research {
+  margin: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.research-btn {
+  margin:2px;
+  text-decoration: none;
+  color: #555555;
+}
+
+.all {
+ color: #8f4c00;
+ border-color: #8f4c00;
+}
+
+.field {
+  color: #089e08;
+  border-color: #089e08;
+}
+
+.human {
+  color: #e7388a;
+  border-color: #e7388a;
+}
+
+.data {
+  color: #3852e7;
+  border-color: #3852e7;
+}
+
+.life {
+  color: #ff8800;
+  border-color: #ff8800;
+}
+
+.manage {
+  color: #c300ff;
+  border-color: #c300ff;
 }

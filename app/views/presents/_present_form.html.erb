@@ -16,6 +16,7 @@
             <%= f.text_field :title, class: 'form-control', required: true %>
           </div>
           <%= hidden_field_tag :main_id, main.id %>
+          <%= hidden_field_tag :research, current_user.research %>
           <div>
             登録者：<%= current_user.name %>
           </div>
