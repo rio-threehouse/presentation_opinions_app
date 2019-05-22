@@ -1,8 +1,17 @@
 class MainsController < ApplicationController
   before_action :require_user_logged_in
   before_action :main_correct_user, only:[:edit, :update, :destroy]
+  before_action :group0, only:[:show]
+  before_action :group1, only:[:group1]
 
   def show
+    @main = Main.find(params[:id])
+    @presents = Present.where(main_id: params[:id])
+    @present = current_user.presents.build
+    @current_user_present = @presents.find_by(user_id: current_user.id)
+  end
+
+  def group1
   end
 
   def create
@@ -48,6 +57,20 @@ class MainsController < ApplicationController
     @main = current_user.mains.find_by(id: params[:id])
     unless @main
       redirect_to root_url
+    end
+  end
+
+  def group0
+    @main = Main.find_by(id: params[:id])
+    unless @main.group == '0'
+      redirect_to group1_main_path(@main)
+    end
+  end
+
+  def group1
+    @main = Main.find_by(id: params[:id])
+    unless @main.group == '1'
+      redirect_to main_path(@main)
     end
   end
 end

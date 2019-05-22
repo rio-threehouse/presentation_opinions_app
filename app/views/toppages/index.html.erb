@@ -23,11 +23,13 @@
                 <div class="main-group">
                   <% if main.group == '0'%>
                     <span class='group-0'>卒業勉強・卒業研究</span>
+                    <h4 class='main-title'><%= link_to main.title, main_path(main) %></h4>
                   <% else %>
                     <span class='group-1'>生活経営研究実習</span>
+                    <h4 class='main-title'><%= link_to main.title, group1_main_path(main) %></h4>
                   <% end %>
                 </div>
-                <h3 class='main-title'><%= link_to main.title, main_path(main) %></h3>
+                
                 <div class="text-muted" style="text-align: right"><i class="fas fa-user-edit"></i><%= main.user.name %></div>
               </li>          
             <% end %>        
@@ -41,7 +43,7 @@
   </div>
 
 <%# 報告会追加フォーム(固定ボタン) %>
-  <button type="button" class="fixed-btn" data-toggle="modal" data-target="#post-form">
+  <button type="button" class="fixed-btn sample-b" data-toggle="modal" data-target="#post-form">
     <i class="fas fa-plus"></i>
   </button>
 

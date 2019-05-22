@@ -5,4 +5,6 @@ class Main < ApplicationRecord
   validates :date, presence: true
   validates :time, presence: true, length: {maximum: 10 }
   validates :group, presence: true
+
+  has_many :presents, dependent: :destroy
 end

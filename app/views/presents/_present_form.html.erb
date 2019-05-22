@@ -1,0 +1,34 @@
+<button type="button" class="fixed-btn group-0-b" data-toggle="modal" data-target="#present-form">
+  <i class="fas fa-plus"></i>
+</button>
+
+<div class="modal fade" id="present-form" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+        <h4 class="modal-title text-center">報告内容を登録</h4>
+      </div>
+      <%= form_for(present) do |f| %>
+        <div class="modal-body">
+          <div class="form-group">
+            <%= f.label :title, 'タイトル' %> <span class="text-muted small">（最大50文字）</span>
+            <%= f.text_field :title, class: 'form-control', required: true %>
+          </div>
+          <%= hidden_field_tag :main_id, main.id %>
+          <div>
+            登録者：<%= current_user.name %>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <div class="text-rmuted" style="text-align: left">
+            ※登録した報告内容の情報変更、削除は<%= current_user.name %>さんのみ行うことができます
+          </div>
+
+          <%= f.submit '登録する', class: 'btn nomal-btn' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

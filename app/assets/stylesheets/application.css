@@ -117,14 +117,22 @@ body {
   bottom: 40px; 
   right: 9%;
 
-  color: #8b1c48;
   font-size: 20px;
   background: #fff;
   padding: 13px;
   border-radius: 50%;
-  border: 1px solid #8b1c48;
 
   box-shadow: 10px 10px 15px -10px;
+}
+
+.sample-b {
+  color: #8b1c48;
+  border: 1px solid #8b1c48;
+}
+
+.group-0-b {
+  color: #4bb7ff;
+  border: 1px solid #4bb7ff;
 }
 
 .sample-btn {
@@ -132,6 +140,13 @@ body {
   padding: 5px;
   border-radius: 50%;
   border: 1px solid #8b1c48;
+}
+
+.group-0-btn {
+  color: #4bb7ff;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid #4bb7ff;
 }
 
 footer {
