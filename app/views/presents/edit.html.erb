@@ -2,6 +2,7 @@
   <div class="panel-heading">
     <h4 class="text-center">報告内容の変更</h4>
     <%= link_to '←戻る', main_path(@present.main), class: 'back-btn' %>
+    <%= link_to '削除', present_path(@present), class: 'delete-btn pull-right', method: :delete, data: {confirm: "この報告内容に関連する投稿が全て削除されます。本当に削除しますか？"} %>
   </div>
   <div class="panel-body">
     <%= form_for(@present) do |f| %>

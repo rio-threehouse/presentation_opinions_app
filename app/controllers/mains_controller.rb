@@ -6,7 +6,7 @@ class MainsController < ApplicationController
 
   def show
     @main = Main.find(params[:id])
-    @presents = Present.where(main_id: params[:id])
+    @presents = Present.where(main_id: params[:id]).order("created_at DESC")
     @present = current_user.presents.build
     @current_user_present = @presents.find_by(user_id: current_user.id)
   end

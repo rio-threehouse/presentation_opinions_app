@@ -6,16 +6,16 @@ class PresentsController < ApplicationController
 
   def create
     present = current_user.presents.build(present_params)
-    @main = Main.find_by(params[:main_id])
-    present.main_id = @main.id
+    main = Main.find(params[:main_id])
+    present.main_id = main.id
 
     if present.save
       flash[:success] = '報告内容を追加しました'
-      redirect_to main_url(@main)
+      redirect_to main_url(main)
     else
       @presents = Present.where(main_id: params[:id])
-      flash.now[:danger] = '報告会内容の追加に失敗しました'
-      render main
+      flash[:danger] = '報告会内容の追加に失敗しました'
+      redirect_to main_url(main)
     end
   end
 
@@ -25,14 +25,17 @@ class PresentsController < ApplicationController
   def update
     if @present.update(present_params)
       flash[:success] = '報告内容を変更しました'
-      redirect_to main_url(@present.main)
+      redirect_to edit_present_url(@present)
     else
-      flash[:danger] = '報告内容の変更に失敗しました'
-      redirect_to main_url(@present.main)
+      flash.now[:danger] = '報告内容の変更に失敗しました'
+      render :edit
     end
   end
 
   def destroy
+    @present.destroy
+    flash[:success] = '報告内容を削除しました'
+    redirect_to main_url(@present.main)
   end
 
   private
