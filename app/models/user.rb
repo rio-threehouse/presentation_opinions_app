@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  validates :name, presence: true, uniqueness: true, length: { maximum: 10 }, confirmation: true
-  validates :name_confirmation, presence: true
+  validates :name, presence: true, uniqueness: true, length: { maximum: 10 }
+  validates :name_read, presence: true, uniqueness: true, length: { maximum: 20 }
   validates :research, presence: true
   
   has_secure_password
