@@ -1,0 +1,16 @@
+<ul>
+  <li><i class="fas fa-plus group-0-btn"></i> を押して報告内容を登録・変更する</li>
+  <%= render'mains/research_btn', main: main %>
+  <% presents.each do |present| %>
+    <li>
+      <span class="pull-right">
+        <% if present.user == current_user %>
+          <%= link_to '変更', edit_present_path(present), class: 'edit-btn' %>
+          <%= link_to '削除', present_path(present), class: 'delete-btn', method: :delete, data: {confirm: "この報告内容に関連する投稿が全て削除されます。本当に削除しますか？"} %>
+        <% end %>
+      </span>
+      <span><%= present.user.name %> / <%= present.research %></span>
+        <h4><%=  present.title %></h4>
+    </li>          
+  <% end %>        
+</ul>

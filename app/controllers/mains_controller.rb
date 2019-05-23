@@ -10,27 +10,27 @@ class MainsController < ApplicationController
 
   def field
     show_data
-    @field_presents = @presents.where(research: 'field')
+    @field_presents = @presents.where(research: 'フィールドサイエンス').order("name_read")
   end
 
   def human
     show_data
-    @human_presents = @presents.where(research: 'human')
+    @human_presents = @presents.where(research: 'ヒューマンサイエンス').order("name_read")
   end
 
   def data
     show_data
-    @data_presents = @presents.where(research: 'data')
+    @data_presents = @presents.where(research: 'データサイエンス').order("name_read")
   end
 
   def life
     show_data
-    @life_presents = @presents.where(research: 'life')
+    @life_presents = @presents.where(research: 'ライフスタイル').order("name_read")
   end
 
   def manage
     show_data
-    @manage_presents = @presents.where(research: 'manage')
+    @manage_presents = @presents.where(research: 'マネジメント').order("name_read")
   end
 
   def group1
@@ -77,7 +77,7 @@ class MainsController < ApplicationController
   
   def show_data
     @main = Main.find(params[:id])
-    @presents = Present.where(main_id: params[:id]).order("created_at DESC")
+    @presents = Present.where(main_id: params[:id]).order("research")
     @present = current_user.presents.build
     @current_user_present = @presents.find_by(user_id: current_user.id)
   end

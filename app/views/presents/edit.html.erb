@@ -10,10 +10,13 @@
         <div class="form-group">
           <%= f.label :title, 'タイトル' %> <span class="text-muted small">（最大50文字）</span>
           <%= f.text_field :title, class: 'form-control', required: true %>
+          <%= hidden_field_tag :name_read, current_user.name_read %>
+          <%= hidden_field_tag :research, current_user.research %>
         </div>
-        <div>
-          登録者：<%= current_user.name %>
-        </div>
+
+        <div>登録者：<%= current_user.name %></div>
+        <div> 所属：<%= current_user.research %></div>
+        
       </div>
 
       <div class="modal-footer">

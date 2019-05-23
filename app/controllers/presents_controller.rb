@@ -8,6 +8,7 @@ class PresentsController < ApplicationController
     present = current_user.presents.build(present_params)
     main = Main.find(params[:main_id])
     present.main_id = main.id
+    present.name_read = params[:name_read]
     present.research = params[:research]
 
     if present.save
@@ -24,6 +25,8 @@ class PresentsController < ApplicationController
   end
 
   def update
+    @present.name_read = params[:name_read]
+    @present.research = params[:research]
     if @present.update(present_params)
       flash[:success] = '報告内容を変更しました'
       redirect_to edit_present_url(@present)

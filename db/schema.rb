@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20190521101114) do
 
   create_table "presents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
+    t.string   "name_read"
     t.string   "research"
     t.integer  "user_id"
     t.integer  "main_id"
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(version: 20190521101114) do
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
+    t.string   "name_read"
     t.string   "research"
     t.string   "password_digest"
     t.datetime "created_at",      null: false
