@@ -9,7 +9,7 @@
           <%= link_to '削除', present_path(present), class: 'delete-btn', method: :delete, data: {confirm: "この報告内容に関連する投稿が全て削除されます。本当に削除しますか？"} %>
         <% end %>
       </span>
-      <span><%= present.user.name %> / <%= present.research %></span>
+      <span><%= present.user.name %> <%= render 'mains/research_tag', present: present %></span>
         <h4><%=  present.title %></h4>
     </li>          
   <% end %>        

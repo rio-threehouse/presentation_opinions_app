@@ -199,7 +199,7 @@ footer {
   margin: 15px 0px 5px 15px;
 }
 
-/* ゼミボタン */
+/* ゼミボタン・タグ */
 .research {
   margin: 5px;
   padding-bottom: 5px;
@@ -210,28 +210,43 @@ footer {
   margin:2px;
   text-decoration: none;
   color: #555555;
+  border-radius: 15px;
+  border: 1px solid #c4c4c4;
+}
+
+.research-tag {
+  font-size: 11px;
+  padding:2px;
+  border-radius: 15px;
+  margin-left: 5px;
 }
 
 .all {
  background: #8f4c005b;
+ border-color: #8f4c005b;
 }
 
 .field {
   background: #089e0852;
+  border-color: #089e0852;
 }
 
 .human {
   background: #ff50ca56;
+  border-color: #ff50ca56;
 }
 
 .data {
   background: #3852e75b;
+  border-color: #3852e75b;
 }
 
 .life {
   background: #ff880056;
+  border-color: #ff880056;
 }
 
 .manage {
   background: #a200ff3f;
+  border-color: #a200ff3f;
 }

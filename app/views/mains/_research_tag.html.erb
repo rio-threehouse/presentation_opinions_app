@@ -1,0 +1,14 @@
+<span class="research-tag 
+            <% if present.research == 'フィールドサイエンス' %>
+              field
+            <% elsif present.research == 'ヒューマンサイエンス' %>
+              human
+            <% elsif present.research == 'データサイエンス' %>
+              data
+            <% elsif present.research == 'ライフスタイル' %>
+              life
+            <% else %>
+              manage
+            <% end %>">
+  <%= present.research %>
+</span>
