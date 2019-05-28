@@ -1,7 +1,9 @@
 class PresentsController < ApplicationController
+  before_action :require_user_logged_in
   before_action :present_correct_user, only:[:edit, :update, :destroy]
 
   def show
+    @present = Present.find(params[:id])
   end
 
   def create

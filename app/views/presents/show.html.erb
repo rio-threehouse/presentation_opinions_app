@@ -1,2 +1,15 @@
-<h1>Presents#show</h1>
-<p>Find me in app/views/presents/show.html.erb</p>
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <div class="panel">
+      <div class="panel-heading">
+        <span><%= @present.user.name %> <%= render 'mains/research_tag', present: @present %></span>
+        <h4><%= @present.title %></h4>
+      </div>
+      <div class="panel-body">
+        <%# 投稿一覧 %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%# 投稿ボタンを設置 %>

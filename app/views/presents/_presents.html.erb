@@ -10,7 +10,7 @@
         <% end %>
       </span>
       <span><%= present.user.name %> <%= render 'mains/research_tag', present: present %></span>
-        <h4><%=  present.title %></h4>
+        <h4><%= link_to present.title, present %></h4>
     </li>          
   <% end %>        
 </ul>
