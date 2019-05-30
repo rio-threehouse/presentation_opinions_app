@@ -56,7 +56,7 @@ gem 'kaminari'
 
 gem 'rails-i18n'
 
-gem 'bcrypt', '~> 3.1.7'
+gem 'pry-byebug', group: :development
 
 group :production do
   gem 'pg', '0.21.0'
