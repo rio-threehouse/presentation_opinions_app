@@ -3,6 +3,7 @@
   <%= render'mains/research_btn', main: main %>
   <% presents.each do |present| %>
     <li>
+      <%= link_to '', present, class: 'linkbox'%>
       <span class="pull-right">
         <% if present.user == current_user %>
           <%= link_to '変更', edit_present_path(present), class: 'edit-btn' %>
@@ -10,7 +11,7 @@
         <% end %>
       </span>
       <span><%= present.user.name %> <%= render 'mains/research_tag', present: present %></span>
-        <h4><%= link_to present.title, present %></h4>
+        <h4><%= present.title %></h4>
     </li>          
   <% end %>        
 </ul>

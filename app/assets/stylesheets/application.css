@@ -50,6 +50,8 @@ a {
 .delete-btn {
   font-size: 11px;
 
+  position: relative;
+
   color: #ca0101;
   background: #fff;
   border: 1px solid #ca0101;
@@ -66,6 +68,8 @@ a {
 /* 変更ボタン */
 .edit-btn {
   font-size: 11px;
+
+  position: relative;
 
   color: #e06c00;
   background: #fff;
@@ -114,6 +118,21 @@ a {
   list-style: none;
   padding: 10px;
   border-bottom: 1px solid #d3d3d3;
+  /* リンク全面 */
+  position: relative; 
+}
+
+/* 全面リンク設定。名前なしのリンクを設定 */
+.linkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.linkbox:hover {
+  background: #dddada23;
 }
 
 /* 報告会フォームボタン */
