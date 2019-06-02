@@ -26,7 +26,8 @@
 
         <div class="modal-footer">
           <div class="text-rmuted" style="text-align: left">
-            ※登録した報告内容の情報変更、削除は<%= current_user.name %>さんのみ行うことができます
+            ※登録した報告内容の情報変更、削除は<%= current_user.name %>さんのみ行うことができます<br>
+            ※報告会に対して登録できる報告内容は一人１つまでです
           </div>
 
           <%= f.submit '登録する', class: 'btn nomal-btn' %>
