@@ -13,6 +13,10 @@ a {
   color: #55555554;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 /* パンくずリスト */
 .breadcrumbs {
   background: #f7a8c75e;
@@ -52,7 +56,6 @@ a {
   border-radius: 0px;
   padding: 10px 16px;
   margin: 10px;
-  text-decoration: none;
 }
 
 .nomal-btn:hover {
@@ -70,13 +73,11 @@ a {
   background: #fff;
   border: 1px solid #ca0101;
   padding: 3px;
-  text-decoration: none;
 }
 
 .delete-btn:hover {
   color: #ff0000;
   border: 1px solid #ff0000;
-  text-decoration: none;
 }
 
 /* 変更ボタン */
@@ -89,13 +90,11 @@ a {
   background: #fff;
   border: 1px solid #e06c00;
   padding: 3px;
-  text-decoration: none;
 }
 
 .edit-btn:hover {
   color: #ff7b00;
   border: 1px solid #ff7b00;
-  text-decoration: none;
 }
 
 /* バックボタン */
@@ -106,13 +105,11 @@ a {
   background: #fff;
   border: 1px solid #e06c00;
   padding: 5px;
-  text-decoration: none;
 }
 
 .back-btn:hover {
   color: #ff7b00;
   border: 1px solid #ff7b00;
-  text-decoration: none;
 }
 
 /* パネル */
@@ -246,7 +243,6 @@ footer {
 
 .select-btn {
   margin:2px;
-  text-decoration: none;
   color: #555555;
   border-radius: 15px;
   border: 1px solid #c4c4c4;
@@ -315,7 +311,6 @@ footer {
 
 .comment-tag label {
   color: #666666;
-  text-decoration: none;
 
   padding: 5px 10px;
   border: 1px solid #666666;
@@ -380,10 +375,6 @@ footer {
 .ownerbtn {
   position: relative;
   color: #8b1c48;
-  border-bottom: 1px solid #8b1c48
-}
-
-.ownerbtn:hover {
-  text-decoration: none;
-  color: #770432;
+  text-align: center;
+  border: 1px solid #8b1c48;
 }

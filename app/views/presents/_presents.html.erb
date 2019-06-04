@@ -13,8 +13,10 @@
       <span><%= present.user.name %> <%= render 'mains/research_tag', present: present %></span>
         <h4><%= present.title %></h4>
       <% if present.user == current_user %>
-        <%= link_to  owner_present_path(present), class: 'ownerbtn' do %>
-          <i class="fas fa-tags"></i> アンケート集計結果
+        <%= link_to owner_present_path(present)  do %>
+          <div class='ownerbtn'>
+            <i class="fas fa-tags"></i> アンケート集計結果
+          </div>
         <% end %>
       <% end %>
     </li>          
