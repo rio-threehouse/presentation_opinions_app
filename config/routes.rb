@@ -20,6 +20,15 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :presents, only:[:show, :create, :edit, :update, :destroy]
+  resources :presents, only:[:show, :create, :edit, :update, :destroy] do
+    member do
+      get :owner
+      get :tag1
+      get :tag2
+      get :tag3
+      get :tag4
+    end
+  end
 
+  resources :comments, only: [:create, :edit, :update, :destroy]
 end

@@ -1,0 +1,12 @@
+<span class="tag
+             <% if comment.tag == '指摘' %>
+             siteki
+             <% elsif comment.tag == '疑問' %>
+             gimon
+             <% elsif comment.tag == '感想' %>
+             kanso
+             <% else %>
+             sonota
+             <% end %>">
+  <i class="fas fa-tag"></i> <%= comment.tag %>
+</span>

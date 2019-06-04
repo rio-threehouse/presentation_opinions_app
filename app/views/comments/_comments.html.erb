@@ -1,0 +1,16 @@
+<ul>
+  <% comments.each do |comment| %>
+    <li>
+      <%= render 'comments/comment_tag', comment: comment %>
+      <span class="pull-right">
+        <% if comment.user == current_user %>
+          <%= link_to '変更', edit_comment_path(comment), class: 'edit-btn' %>
+          <%= link_to '削除', comment_path(comment), class: 'delete-btn', method: :delete, data: {confirm: "本当に削除しますか？"} %>
+        <% end %>
+      </span>
+      <div class=comment>
+        <%= simple_format(comment.comment) %>
+      </div>
+    </li>
+  <% end %>
+</ul>

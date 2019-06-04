@@ -10,7 +10,12 @@ ja:
         research: 所属
         password: パスワード
         password_confirmation: パスワード確認
-
+    models:
+      comment: コメント
+    attributes:
+      comment:
+        comment: コメント
+        
   # ページネーション
   views:
     pagination:

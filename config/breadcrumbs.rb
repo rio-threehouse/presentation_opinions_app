@@ -52,3 +52,8 @@ crumb :present do |present|
     parent :main_manage, present.main
   end
 end
+
+crumb :present_owner do |present|
+  link 'アンケート集計', owner_present_path(present)
+  parent :present, present
+end

@@ -1,9 +1,11 @@
 class PresentsController < ApplicationController
   before_action :require_user_logged_in
-  before_action :present_correct_user, only:[:edit, :update, :destroy]
+  before_action :present_correct_user, only:[:edit, :update, :destroy, :owner, :tag1, :tag2, :tag3, :tag4]
 
   def show
     @present = Present.find(params[:id])
+    @comments = @present.comments.where(user_id: current_user.id).order('created_at DESC')
+    @comment = current_user.comments.build
   end
 
   def create
@@ -44,8 +46,37 @@ class PresentsController < ApplicationController
     redirect_to main_url(@present.main)
   end
 
+  def owner
+    owner_data
+  end
+
+  def tag1
+    owner_data
+    @tag1 = @comments.where(tag: '指摘').page(params[:page])
+  end
+
+  def tag2
+    owner_data
+    @tag2 = @comments.where(tag: '疑問').page(params[:page])
+  end
+
+  def tag3
+    owner_data
+    @tag3 = @comments.where(tag: '感想').page(params[:page])
+  end
+
+  def tag4
+    owner_data
+    @tag4 = @comments.where(tag: 'その他').page(params[:page])
+  end
+
   private
 
+  def owner_data
+    @present = Present.find(params[:id])
+    @comments = Comment.where(present_id: params[:id]).order('created_at DESC').page(params[:page])
+  end
+  
   def present_params
     params.require(:present).permit(:title)
   end

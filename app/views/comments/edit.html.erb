@@ -9,6 +9,7 @@
       <div class="panel-body">
         <div class="comment-form">
           <%= form_for(@comment) do |f| %>
+            <%= render 'layouts/error_messages', model: f.object %>
             <div class="comment-tag">
               <div>
                 <i class="fas fa-tag"></i> <span class="label label-danger">必須</span>
@@ -28,24 +29,14 @@
               <%= f.text_area :comment, class: 'form-control', required: true, rows: 5, placeholder: 'タグを選択してコメント内容を記入' %>
             </div>
 
-            <%= hidden_field_tag :present_id, @present.id %>
             ※このコメントは発表者のみに公開されます<br>
             ※タグを指定しないとコメントボタンは押せません
 
-            <%= f.submit 'コメントする', class: 'collapse-btn' %>
+            <%= f.submit '変更する', class: 'collapse-btn' %>
           <% end %>
+          <br>
+          <%= link_to '←戻る', present_path(@comment.present), class: 'back-btn' %>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-8 col-sm-offset-2">
-    <div class="panel">
-      <div class="panel-heading text-center">
-        投稿コメント一覧
-      </div>
-      <div class="panel-body">
-        <%= render 'comments/comments', comments: @comments %>
       </div>
     </div>
   </div>

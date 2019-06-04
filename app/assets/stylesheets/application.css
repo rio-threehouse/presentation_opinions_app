@@ -237,14 +237,14 @@ footer {
   margin: 15px 0px 5px 15px;
 }
 
-/* ゼミボタン・タグ */
-.research {
+/* セレクトボタン */
+.select-format {
   margin: 5px;
   padding-bottom: 5px;
   border-bottom: 1px solid #d3d3d3;
 }
 
-.research-btn {
+.select-btn {
   margin:2px;
   text-decoration: none;
   color: #555555;
@@ -252,39 +252,138 @@ footer {
   border: 1px solid #c4c4c4;
 }
 
+/* ゼミボタン・タグ */
 .research-tag {
   font-size: 11px;
-  padding:2px;
+  padding:3px 2px;
   border-radius: 15px;
   margin-left: 5px;
 }
 
 .all {
- background: #8f4c005b;
- border-color: #8f4c005b;
+ background: #d4b28c;
+ border-color: #d4b28c;
 }
 
 .field {
-  background: #089e0852;
-  border-color: #089e0852;
+  background: #b2f5b2;
+  border-color: #b2f5b2;
 }
 
 .human {
-  background: #ff50ca56;
-  border-color: #ff50ca56;
+  background: #fdbeea;
+  border-color: #fdbeea;
 }
 
 .data {
-  background: #3852e75b;
-  border-color: #3852e75b;
+  background: #bac4fd;
+  border-color: #bac4fd;
 }
 
 .life {
-  background: #ff880056;
-  border-color: #ff880056;
+  background: #ffd993;
+  border-color: #ffd993;
 }
 
 .manage {
-  background: #a200ff3f;
-  border-color: #a200ff3f;
+  background: #e2b0ff;
+  border-color: #e2b0ff;
+}
+
+/* 開閉ボタン */
+.collapse-btn {
+  width: 90%;
+  margin: 2% 5%;
+
+  color: #8b1c48;
+  border: 1px solid #8b1c48;
+  background: #ffffff;
+}
+
+/* コメント */
+.comment-form {
+  margin: 10px 5px;
+}
+
+/* commentタグのラジオボタン */
+.comment-tag {
+ margin-left: 5px;
+}
+.comment-tag input {
+  display: none;
+}
+
+.comment-tag label {
+  color: #666666;
+  text-decoration: none;
+
+  padding: 5px 10px;
+  border: 1px solid #666666;
+  border-radius: 10px;
+  margin: 6px 10px 5px 0px;
+
+  font-weight: normal;
+}
+
+.comment-tag input[type="radio"]:checked.siteki + label {
+  color: #555555;
+  background: #ffa4a4b7;
+}
+
+.comment-tag input[type="radio"]:checked.gimon + label {
+  color: #555555;
+  background: #ccffa3a9;
+}
+
+.comment-tag input[type="radio"]:checked.kanso + label {
+  color: #555555;
+  background: #ffe48ac0;
+}
+
+.comment-tag input[type="radio"]:checked.sonota + label {
+  color: #555555;
+  background: #fffae2;
+}
+
+/* コメントタグ */
+.tag {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.siteki {
+  background: #ffbebe;
+  border-color: #ffbebe;
+}
+
+.gimon {
+  background: #ccffa3a9;
+  border-color: #ccffa3a9;
+}
+
+.kanso {
+  background: #ffe48ac0;
+  border-color: #ffe48ac0;
+}
+
+.sonota {
+  background: #fffae2;
+  border-color: #fffae2;
+}
+
+/* コメント表示 */
+.comment {
+  margin-top: 10px;
+}
+
+/* オーナーボタン */
+.ownerbtn {
+  position: relative;
+  color: #8b1c48;
+  border-bottom: 1px solid #8b1c48
+}
+
+.ownerbtn:hover {
+  text-decoration: none;
+  color: #770432;
 }

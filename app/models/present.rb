@@ -4,4 +4,6 @@ class Present < ApplicationRecord
 
   validates :title, presence: true, length: { maximum: 50 }
   validates :research, presence: true
+
+  has_many :comments, dependent: :destroy
 end

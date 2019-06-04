@@ -8,4 +8,6 @@ class User < ApplicationRecord
   has_many :mains, dependent: :destroy
 
   has_many :presents, dependent: :destroy
+
+  has_many :comments, dependent: :destroy
 end

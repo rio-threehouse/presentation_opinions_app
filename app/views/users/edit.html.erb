@@ -30,11 +30,10 @@
                                   class: 'form-control' %>
         </div>
 
-        <p>
-          <button type="button" class="btn btn-block" data-toggle="collapse" data-target="#password">
-            パスワードを変更
-          </button>
-        </p>
+        <button type="button" class="collapse-btn" data-toggle="collapse" data-target="#password">
+          パスワード設定
+        </button>
+
         <div class="collapse" id="password">
           <div class="form-group">
             <%= f.label :password, 'パスワード'%>
@@ -48,7 +47,7 @@
         </div>
 
         <div class="text-center">
-          <%= f.submit '変更する', class: 'btn nomal-btn'%>
+          <%= f.submit '変更', class: 'btn nomal-btn'%>
         </div>
       <% end %>   
     </div>
