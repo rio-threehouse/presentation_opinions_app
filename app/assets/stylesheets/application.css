@@ -378,3 +378,10 @@ footer {
   text-align: center;
   border: 1px solid #8b1c48;
 }
+
+/* カウントバッチ */
+.badge {
+  background: #ffffff;
+  color: #696969;
+  border: 1px solid #c4c4c4;
+}

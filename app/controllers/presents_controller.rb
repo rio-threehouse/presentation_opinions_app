@@ -75,6 +75,7 @@ class PresentsController < ApplicationController
   def owner_data
     @present = Present.find(params[:id])
     @comments = Comment.where(present_id: params[:id]).order('created_at DESC').page(params[:page])
+    counts(@present)
   end
   
   def present_params
@@ -86,5 +87,13 @@ class PresentsController < ApplicationController
     unless @present
       redirect_to root_url
     end
+  end
+
+  def counts(present)
+    @comment_counts = present.comments.count
+    @tag1_counts = present.comments.where(tag: '指摘').count
+    @tag2_counts = present.comments.where(tag: '疑問').count
+    @tag3_counts = present.comments.where(tag: '感想').count
+    @tag4_counts = present.comments.where(tag: 'その他').count
   end
 end
