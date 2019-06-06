@@ -228,15 +228,6 @@ footer {
   border-radius:15px;		
 }
 
-/* リンク */
-.link {
-  color: #fff;
-}
-
-.link:hover {
-  color: #fff;
-}
-
 /* mainのデザイン */
 .main-group {
   margin-top:10px;
@@ -420,4 +411,10 @@ footer {
 .mypresent {
   border-top: 1px dotted #d3d3d3;
   padding: 10px 0px;
+}
+
+.mybtn {
+  color: #fff;
+  background: #8b1c48;
+  border-color: #8b1c48;
 }

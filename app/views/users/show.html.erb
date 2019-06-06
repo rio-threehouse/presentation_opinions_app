@@ -6,10 +6,21 @@
       </div>
       <div class="panel-body">
         <ul>
+          <li class="text-center">
+            <%= link_to user_path(current_user) do %>
+              <span class="<%= 'mybtn' if current_page?(user_path(current_user)) %> btn select-btn">
+                登録した報告会内容一覧
+              </span>
+            <% end %>
+            <%= link_to edit_user_path(current_user) do %>
+              <span class="<%= 'mybtn' if current_page?(edit_user_path(current_user)) %> btn select-btn">
+                ユーザ設定
+              </span>
+            <% end %>
+          </li>
           <% @presents.each do |present| %>
             <li>
               <div class="text-center">
-                
                 <span class="text-muted">
                   <%= present.main.date.strftime('%Y/%m/%d') %>
                   <i class="far fa-clock"></i> <%= present.main.time %>
@@ -18,8 +29,6 @@
                   <%= present.main.title %>
                 </div>
               </div>
-              
-              
               <div class="mypresent">
                 <%= link_to '', present, class: 'linkbox'%>
                 <span class="pull-right">
