@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 body {
-  padding-top: 70px;
   color: #555555;
   background: #8b1c48;
 
@@ -10,11 +9,37 @@ body {
 
 /* リンク */
 a {
-  color: #55555554;
+  color: #555555;
 }
 
 a:hover {
   text-decoration: none;
+}
+
+/* ナビバー */
+header {
+  background: #ffffff;
+  margin-bottom: 10px;
+  border-bottom: 0.5px solid #d6d6d6;
+}
+
+.logo {
+  /* margin: 15px 20px; */
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 5%;
+  width: 150px;
+}
+
+.nav .btn {
+  font-size: 9px;
+  padding: 0px;
+  margin-top: 13px;
+  margin-right: 5%;
+}
+
+.navicon {
+  font-size: 16px;
 }
 
 /* パンくずリスト */
@@ -236,8 +261,7 @@ footer {
 
 /* セレクトボタン */
 .select-format {
-  margin: 5px;
-  padding-bottom: 5px;
+  padding: 10px 30px;
   border-bottom: 1px solid #d3d3d3;
 }
 
