@@ -5,7 +5,7 @@
       <%= link_to logout_path, method: :delete do %>
         <span class="btn text-center pull-right"><i class="fas fa-sign-out-alt navicon"></i><br>ログアウト</span>
       <% end %>
-      <%= link_to edit_user_path(current_user) do %>
+      <%= link_to user_path(current_user) do %>
         <span class="btn text-center pull-right"><i class="fas fa-user navicon"></i><br>マイページ</span>
       <% end %>
     <% else %>

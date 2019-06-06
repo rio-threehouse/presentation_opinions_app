@@ -240,19 +240,20 @@ footer {
 /* mainのデザイン */
 .main-group {
   margin-top:10px;
-  font-size: 12px;
 }
 
 .group-0 {
   background: #d0faff;
   padding: 5px;
   border-radius: 6px;
+  font-size: 12px;
 } 
 
 .group-1 {
   background: #fff8d0;
   padding: 5px;
   border-radius: 6px;
+  font-size: 12px;
 }
 
 .main-title {
@@ -408,4 +409,15 @@ footer {
   background: #ffffff;
   color: #696969;
   border: 1px solid #c4c4c4;
+}
+
+/* マイページ */
+.mypage-main {
+  font-size: 16px;
+  color: #2c2c2c;
+}
+
+.mypresent {
+  border-top: 1px dotted #d3d3d3;
+  padding: 10px 0px;
 }

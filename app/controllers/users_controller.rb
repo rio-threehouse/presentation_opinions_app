@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :require_user_logged_in, only:[:edit, :update, :destroy]
+  before_action :user_correct_user, only:[:show]
 
   def new
     @user = User.new
@@ -36,9 +37,19 @@ class UsersController < ApplicationController
     redirect_to root_url
   end
 
+  def show
+    @presents = Present.where(user_id: params[:id]).order('created_at DESC')
+  end
+
   private
 
   def user_params
     params.require(:user).permit(:name, :name_read, :research, :password, :password_confirmation)
+  end
+
+  def user_correct_user
+    unless current_user == User.find(params[:id])
+      redirect_to root_url
+    end
   end
 end
