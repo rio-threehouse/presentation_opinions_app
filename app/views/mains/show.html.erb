@@ -10,7 +10,15 @@
         </span>
         <h4 class='main-title'><%=  @main.title %></h4>
       </div>
-
+      <div class="panel-body">
+        <li><i class="fas fa-plus group-0-btn"></i> を押して報告内容を登録・変更する</li>
+      </div>
+    </div>
+    
+    <div class="panel">
+      <div class="panel-heading">
+        <%= render'mains/research_btn', main: @main %>
+      </div>
       <div class="panel-body">
         <%= render 'presents/presents', presents: @presents, main: @main %>      
       </div>

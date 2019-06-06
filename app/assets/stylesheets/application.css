@@ -49,7 +49,7 @@ header {
 
   padding: 5px;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .breadcrumbs a {
@@ -189,8 +189,8 @@ header {
 }
 
 .group-0-b {
-  color: #4bb7ff;
-  border: 3px solid #4bb7ff;
+  color: #b1ebf1;
+  border: 3px solid #b1ebf1;
 }
 
 .sample-btn {
@@ -201,10 +201,10 @@ header {
 }
 
 .group-0-btn {
-  color: #4bb7ff;
+  color: #b1ebf1;
   padding: 5px;
   border-radius: 50%;
-  border: 3px solid #4bb7ff;
+  border: 3px solid #b1ebf1;
 }
 
 footer {
@@ -253,8 +253,7 @@ footer {
 
 /* セレクトボタン */
 .select-format {
-  padding: 10px 30px;
-  border-bottom: 1px solid #d3d3d3;
+  padding: 0px 10px;
 }
 
 .select-btn {
@@ -273,33 +272,33 @@ footer {
 }
 
 .all {
- background: #d4b28c;
- border-color: #d4b28c;
+ background: #e4c5a4;
+ border-color: #e4c5a4;
 }
 
 .field {
-  background: #b2f5b2;
-  border-color: #b2f5b2;
+  background: #ddffd5;
+  border-color: #ddffd5;
 }
 
 .human {
-  background: #fdbeea;
-  border-color: #fdbeea;
+  background: #ffdbf4;
+  border-color: #ffdbf4;
 }
 
 .data {
-  background: #bac4fd;
-  border-color: #bac4fd;
+  background: #d5dbff;
+  border-color: #d5dbff;
 }
 
 .life {
-  background: #ffd993;
-  border-color: #ffd993;
+  background: #ffebc5;
+  border-color: #ffebc5;
 }
 
 .manage {
-  background: #e2b0ff;
-  border-color: #e2b0ff;
+  background: #eecfff;
+  border-color: #eecfff;
 }
 
 /* 開閉ボタン */
@@ -393,8 +392,12 @@ footer {
   color: #8b1c48;
   text-align: center;
   border: 1px solid #8b1c48;
+  margin: 25px 3px 3px 3px;
 }
 
+.present-title {
+  margin: 20px 0px;
+}
 /* カウントバッチ */
 .badge {
   background: #ffffff;
@@ -403,11 +406,6 @@ footer {
 }
 
 /* マイページ */
-.mypage-main {
-  font-size: 16px;
-  color: #2c2c2c;
-}
-
 .mypresent {
   border-top: 1px dotted #d3d3d3;
   padding: 10px 0px;

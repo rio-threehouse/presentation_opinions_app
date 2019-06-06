@@ -25,9 +25,7 @@
                   <%= present.main.date.strftime('%Y/%m/%d') %>
                   <i class="far fa-clock"></i> <%= present.main.time %>
                 </span> 
-                <div class="mypage-main">
-                  <%= present.main.title %>
-                </div>
+                <h4><%= present.main.title %></h4>
               </div>
               <div class="mypresent">
                 <%= link_to '', present, class: 'linkbox'%>
@@ -38,7 +36,7 @@
                   <% end %>
                 </span>
                 <span><%= render 'mains/research_tag', present: present %></span>
-                  <h4><%= present.title %></h4>
+                  <div class="present-title"><%= present.title %></div>
                 <% if present.user == current_user %>
                   <%= link_to owner_present_path(present)  do %>
                     <div class='ownerbtn'>
