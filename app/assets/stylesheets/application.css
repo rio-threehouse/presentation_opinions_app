@@ -197,33 +197,36 @@ header {
   right: 9%;
 
   font-size: 20px;
-  background: #fff;
+  color: #fff;
   padding: 9px;
   border-radius: 50%;
+  box-shadow: 0 3px 6px #808080;
 }
 
 .sample-b {
-  color: #8b1c48;
+  background: #8b1c48;
   border: 3px solid #8b1c48;
 }
 
 .group-0-b {
-  color: #b1ebf1;
-  border: 3px solid #b1ebf1;
+  background: #509bad;
+  border: 3px solid #509bad;
 }
 
 .sample-btn {
-  color: #8b1c48;
+  color: #fff;
+  background: #8b1c48;
   padding: 5px;
   border-radius: 50%;
   border: 3px solid #8b1c48;
 }
 
 .group-0-btn {
-  color: #b1ebf1;
+  color: #fff;
+  background: #509bad;
   padding: 5px;
   border-radius: 50%;
-  border: 3px solid #b1ebf1;
+  border: 3px solid #509bad;
 }
 
 footer {
