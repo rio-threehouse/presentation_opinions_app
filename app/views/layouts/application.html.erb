@@ -17,8 +17,9 @@
 
   <body>
     <%= render 'layouts/navbar' %>
-
-    <div class="container">
+    <% if logged_in? %>
+      <div class="container">
+    <% end %>
       <%= render 'layouts/flash_messages' %>
       <%= breadcrumbs separator: " &rsaquo; " %>
 

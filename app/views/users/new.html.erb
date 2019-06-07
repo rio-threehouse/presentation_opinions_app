@@ -1,54 +1,56 @@
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <div class="jumbotron">
-      <div class="text-center">
-        <i class="fas fa-user-plus"></i>
-        <p>アカウント作成</p>
-      </div>
-
-      <%= form_for(@user) do |f| %>
-        <%= render 'layouts/error_messages', model: f.object %>
-        <div class="form-group">
-          <%= f.label :name, '名前' %>
-          <%= f.text_field :name, class: 'form-control', placeholder: 'ex.自由花子（漢字フルネーム）', required: true %>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :name_read, 'ふりがな' %>
-          <%= f.text_field :name_read, class: 'form-control', placeholder: 'ex.じゆうはなこ', required: true %>
-        </div>
-
-        <ul class="text-muted">
-          <li>アンケートの回答は匿名式です</li>
-          <li>必ず本名のフルネームでアカウントを登録してください</li>
-        </ul>
-
-        <%# researchのフォーム %>
-        <div class="form-group">
-         <%= f.label :research, '所属'%><br>
-         <%= f.select :research, [['教職員','teacher'],
-                                  ['農芸','農芸'],['樹木','樹木'],['草本・潅木','草本'],
-                                  ['食','食'],['図書・記録資料','図書'],['資源・エネルギー','資源'],
-                                  ['フィールドサイエンス','フィールドサイエンス'],['ヒューマンサイエンス','ヒューマンサイエンス'],
-                                  ['データサイエンス','データサイエンス'],['ライフスタイル','ライフスタイル'],
-                                  ['マネジメント','マネジメント']],
-                                  class: 'form-control', :prompt => "選択してください" %>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :password, 'パスワード'%>
-          <%= f.password_field :password, class: 'form-control', required: true %>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :password_confirmation, 'パスワード確認' %>
-          <%= f.password_field :password_confirmation, class: 'form-control', required: true %>
-        </div>
-
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="jumbotron">
         <div class="text-center">
-          <%= f.submit 'アカウントを登録する', class: 'btn nomal-btn'%>
+          <i class="fas fa-user-plus"></i>
+          <p>アカウント作成</p>
         </div>
-      <% end %>
+
+        <%= form_for(@user) do |f| %>
+          <%= render 'layouts/error_messages', model: f.object %>
+          <div class="form-group">
+            <%= f.label :name, '名前' %>
+            <%= f.text_field :name, class: 'form-control', placeholder: 'ex.自由花子（漢字フルネーム）', required: true %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :name_read, 'ふりがな' %>
+            <%= f.text_field :name_read, class: 'form-control', placeholder: 'ex.じゆうはなこ', required: true %>
+          </div>
+
+          <ul class="text-muted">
+            <li>アンケートの回答は匿名式です</li>
+            <li>必ず本名のフルネームでアカウントを登録してください</li>
+          </ul>
+
+          <%# researchのフォーム %>
+          <div class="form-group">
+          <%= f.label :research, '所属'%><br>
+          <%= f.select :research, [['教職員','teacher'],
+                                    ['農芸','農芸'],['樹木','樹木'],['草本・潅木','草本'],
+                                    ['食','食'],['図書・記録資料','図書'],['資源・エネルギー','資源'],
+                                    ['フィールドサイエンス','フィールドサイエンス'],['ヒューマンサイエンス','ヒューマンサイエンス'],
+                                    ['データサイエンス','データサイエンス'],['ライフスタイル','ライフスタイル'],
+                                    ['マネジメント','マネジメント']],
+                                    class: 'form-control', :prompt => "選択してください" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :password, 'パスワード'%>
+            <%= f.password_field :password, class: 'form-control', required: true %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :password_confirmation, 'パスワード確認' %>
+            <%= f.password_field :password_confirmation, class: 'form-control', required: true %>
+          </div>
+
+          <div class="text-center">
+            <%= f.submit 'アカウントを登録する', class: 'btn nomal-btn'%>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

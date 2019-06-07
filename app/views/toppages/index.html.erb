@@ -61,20 +61,14 @@
   </div>
 
 <% else %>
-  <div class="text-center">
-
-    <div class="top-title">
-      <div class="top-jiyu">自由学園</div>
-      <h2 style="margin-top:0px">報告会アンケート</h2>
-      <h4>卒業勉強・卒業研究 / 生活経営研究実習</h4>
+  <div class="cover">
+    <div class="cover-inner">
     </div>
-
-    <div class="jumbotron">
-      <i class="fas fa-user-plus"></i>
-      <div>アンケートに参加する</div>
+  </div>
+  <div class="container">
+    <div class="text-center">
       <%= link_to 'アカウント登録', signup_path, class: 'btn nomal-btn' %>
       <%= link_to 'ログイン', login_path, class: 'btn nomal-btn'%>
     </div>
-    
   </div>
 <% end %>
