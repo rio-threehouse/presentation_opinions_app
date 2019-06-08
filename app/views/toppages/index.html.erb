@@ -1,44 +1,45 @@
 <% if logged_in? %>
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
-      <div class="panel">
-        <div class="panel-heading text-center">
-          <i class="fas fa-list"></i> 報告会一覧
-        </div>
-        <div class="panel-body">
-          <ul>
-            <li><i class="fas fa-plus sample-btn"></i> を押して報告会を追加する</li>
-            <% @mains.each do |main| %>
-              <li>
-              <%= link_to '', main, class: 'linkbox' %>
-                <span class="text-muted">
-                  <%= main.date.strftime('%Y/%m/%d') %>
-                  <i class="far fa-clock"></i> <%= main.time %>
-                </span>
-                <span class="pull-right">
-                  <% if main.user == current_user %>
-                    <%= link_to '変更', edit_main_path(main), class: 'edit-btn' %>
-                    <%= link_to '削除', main_path(main), class: 'delete-btn', method: :delete, data: {confirm: "この報告会に関連する内容も全て削除されます。本当に削除しますか？"} %>
-                  <% end %>
-                </span>
-                <div class="main-group">
-                  <% if main.group == '0'%>
-                    <span class='group-0'>卒業勉強・卒業研究</span>
-                    <h4 class='main-title'><%= main.title %></h4>
-                  <% else %>
-                    <span class='group-1'>生活経営研究実習</span>
-                    <h4 class='main-title'><%= main.title %></h4>
-                  <% end %>
-                </div>
-                
-                <div class="text-muted" style="text-align: right"><i class="fas fa-user-edit"></i><%= main.user.name %></div>
-              </li>          
-            <% end %>        
-          </ul>           
-        </div>
-        <div class="text-center">
-          <%= paginate @mains%>
-        </div>
+      <div class='pagetitle text-center'>
+        <%# <div class="panel-heading text-center"> %>
+        報告会一覧
+      </div>
+
+      <div class="panel-body">
+        <ul>
+          <%# <li><i class="fas fa-plus sample-btn"></i> を押して報告会を追加する</li> %>
+          <% @mains.each do |main| %>
+            <li class="p">
+            <%= link_to '', main, class: 'linkbox' %>
+              <span class="text-muted">
+                <%= main.date.strftime('%Y/%m/%d') %>
+                <i class="far fa-clock"></i> <%= main.time %>
+              </span>
+              
+              <span class="main-group">
+                <% if main.group == '0'%>
+                  <span class='group-0'>卒業勉強・卒業研究</span>
+                  <h4 class='main-title'><%= main.title %></h4>
+                <% else %>
+                  <span class='group-1'>生活経営研究実習</span>
+                  <h4 class='main-title'><%= main.title %></h4>
+                <% end %>
+              </span>
+
+              <div style="text-align: right">
+                <% if main.user == current_user %>
+                  <%= link_to '変更', edit_main_path(main), class: 'edit-btn' %>
+                  <%= link_to '削除', main_path(main), class: 'delete-btn', method: :delete, data: {confirm: "この報告会に関連する内容も全て削除されます。本当に削除しますか？"} %>
+                <% end %>
+              </div>
+              
+            </li>          
+          <% end %>        
+        </ul>           
+      </div>
+      <div class="text-center">
+        <%= paginate @mains%>
       </div>
     </div>
   </div>

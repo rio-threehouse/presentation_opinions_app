@@ -31,8 +31,22 @@ a:hover {
   text-decoration: none;
 }
 
-.jumbotron {
-  background: #fff
+.container .jumbotron {
+  background: #fff;
+  border-radius: 0px;
+}
+
+.pagetitle {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  padding: 10px 0px;
+  color: #fff;
+  background: #8b1c48;
+}
+
+.panel-body {
+  background: #fff;
 }
 
 /* ナビバー */
@@ -163,16 +177,26 @@ header {
 
 .panel-body {
   padding: 0px;
+  border: none;
 }
 
 .panel-body ul {
   padding: 0px;
+  margin-bottom: 0px;
 }
 
 .panel-body li {
   list-style: none;
   padding: 10px;
-  border-bottom: 1px solid #d3d3d3;
+  border-bottom: 3px solid #efefef;
+  /* リンク全面 */
+  position: relative; 
+}
+
+.panel-body li.p {
+  list-style: none;
+  padding: 10px;
+  border-bottom: 15px solid #efefef;
   /* リンク全面 */
   position: relative; 
 }
@@ -251,21 +275,25 @@ footer {
 }
 
 /* mainのデザイン */
-.main-group {
+/* .main-group {
   margin-top:10px;
-}
+} */
 
 .group-0 {
-  background: #d0faff;
+  color: #fff;
+  background: #509bad;
   padding: 5px;
-  border-radius: 6px;
+  margin-left: 10px;
+  border-radius: 5px;
   font-size: 12px;
 } 
 
 .group-1 {
-  background: #fff8d0;
+  color: #fff;
+  background: #ccbb72;
   padding: 5px;
-  border-radius: 6px;
+  margin-left: 10px;
+  border-radius: 5px;
   font-size: 12px;
 }
 
