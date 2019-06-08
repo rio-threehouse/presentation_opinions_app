@@ -36,13 +36,26 @@ a:hover {
   border-radius: 0px;
 }
 
+/* ページタイトル */
 .pagetitle {
-  font-size: 18px;
   font-weight: 400;
   margin-bottom: 10px;
-  padding: 10px 0px;
+  padding: 10px 10px; 
+}
+
+.nomaltilte {
+  font-size: 16px;
   color: #fff;
   background: #8b1c48;
+}
+
+.zemitiltepage {
+  color: #fff;
+  background: #509bad;
+}
+
+.zemititle {
+  font-size: 16px;
 }
 
 .panel-body {
@@ -77,12 +90,7 @@ header {
 
 /* パンくずリスト */
 .breadcrumbs {
-  background: #f7a8c75e;
-  color: #ffffff;
-
-  padding: 5px;
-  border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .breadcrumbs a {
@@ -127,15 +135,15 @@ header {
 
   position: relative;
 
-  color: #ca0101;
+  color: #ac1010d0;
   background: #fff;
-  border: 1px solid #ca0101;
+  border: 2px solid #ac1010d0;
   padding: 3px;
 }
 
 .delete-btn:hover {
   color: #ff0000;
-  border: 1px solid #ff0000;
+  border-color: #ff0000;
 }
 
 /* 変更ボタン */
@@ -144,15 +152,15 @@ header {
 
   position: relative;
 
-  color: #e06c00;
+  color: #e06c00c9;
   background: #fff;
-  border: 1px solid #e06c00;
+  border: 2px solid #e06c00c9;
   padding: 3px;
 }
 
 .edit-btn:hover {
   color: #ff7b00;
-  border: 1px solid #ff7b00;
+  border-color: #ff7b00;
 }
 
 /* バックボタン */
@@ -240,7 +248,7 @@ header {
 .sample-btn {
   color: #fff;
   background: #8b1c48;
-  padding: 5px;
+  padding: 2px;
   border-radius: 50%;
   border: 3px solid #8b1c48;
 }
@@ -248,7 +256,7 @@ header {
 .group-0-btn {
   color: #fff;
   background: #509bad;
-  padding: 5px;
+  padding: 2px;
   border-radius: 50%;
   border: 3px solid #509bad;
 }
@@ -297,58 +305,48 @@ footer {
   font-size: 12px;
 }
 
-.main-title {
-  margin: 15px 0px 5px 15px;
-}
-
 /* セレクトボタン */
 .select-format {
-  padding: 0px 10px;
+  /* padding: 0px 5px; */
+  margin-bottom: 5px;
 }
 
 .select-btn {
   margin:2px;
   color: #555555;
-  border-radius: 15px;
-  border: 1px solid #c4c4c4;
+  /* border-radius: 15px; */
+  border: 3px solid #c4c4c4;
 }
 
 /* ゼミボタン・タグ */
-.research-tag {
-  font-size: 11px;
-  padding:3px 2px;
-  border-radius: 15px;
-  margin-left: 5px;
-}
-
 .all {
- background: #e4c5a4;
- border-color: #e4c5a4;
+  color: #c08e59;
+ border-color: #c08e59;
 }
 
 .field {
-  background: #ddffd5;
-  border-color: #ddffd5;
+  color: #2a916c;
+  border-color: #2a916c;
 }
 
 .human {
-  background: #ffdbf4;
-  border-color: #ffdbf4;
+  color: #d46ca7;
+  border-color: #d46ca7;
 }
 
 .data {
-  background: #d5dbff;
-  border-color: #d5dbff;
+  color: #5190bf;
+  border-color: #5190bf;
 }
 
 .life {
-  background: #ffebc5;
-  border-color: #ffebc5;
+  color: #f0a544;
+  border-color: #f0a544;
 }
 
 .manage {
-  background: #eecfff;
-  border-color: #eecfff;
+  color: #a066c6;
+  border-color: #a066c6;
 }
 
 /* 開閉ボタン */
@@ -441,7 +439,7 @@ footer {
   position: relative;
   color: #8b1c48;
   text-align: center;
-  border: 1px solid #8b1c48;
+  border: 2px solid #8b1c48;
   margin: 25px 3px 3px 3px;
 }
 

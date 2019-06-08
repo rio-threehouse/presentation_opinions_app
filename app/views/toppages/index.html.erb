@@ -1,14 +1,15 @@
 <% if logged_in? %>
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
-      <div class='pagetitle text-center'>
-        <%# <div class="panel-heading text-center"> %>
+      <div class='pagetitle nomaltilte text-center'>
         報告会一覧
       </div>
+      <%# <div class="panel-body text-center">
+        <li class='p'><i class="fas fa-plus sample-btn"></i> を押して報告会を追加する</li>
+      </div> %>
 
       <div class="panel-body">
         <ul>
-          <%# <li><i class="fas fa-plus sample-btn"></i> を押して報告会を追加する</li> %>
           <% @mains.each do |main| %>
             <li class="p">
             <%= link_to '', main, class: 'linkbox' %>
@@ -27,12 +28,12 @@
                 <% end %>
               </span>
 
-              <div style="text-align: right">
-                <% if main.user == current_user %>
+              <% if main.user == current_user %>
+                <div style="text-align: right">
                   <%= link_to '変更', edit_main_path(main), class: 'edit-btn' %>
                   <%= link_to '削除', main_path(main), class: 'delete-btn', method: :delete, data: {confirm: "この報告会に関連する内容も全て削除されます。本当に削除しますか？"} %>
-                <% end %>
-              </div>
+                </div>
+              <% end %>
               
             </li>          
           <% end %>        
