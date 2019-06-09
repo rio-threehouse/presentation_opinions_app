@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     @comment.present_id = params[:present_id]
 
     if @comment.save
-      flash[:success] = 'コメントしました'
+      flash[:success] = 'コメントを投稿しました'
       redirect_back(fallback_location: root_path)
     else
       flash[:danger] = 'コメントの投稿に失敗しました'
