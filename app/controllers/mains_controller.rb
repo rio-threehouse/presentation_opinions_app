@@ -2,7 +2,7 @@ class MainsController < ApplicationController
   before_action :require_user_logged_in
   before_action :main_correct_user, only:[:edit, :update, :destroy]
   before_action :group0, only:[:show]
-  # before_action :group1, only:[:group1]
+  before_action :group1, only:[:group1]
 
   def show
     show_data
@@ -96,10 +96,10 @@ class MainsController < ApplicationController
     end
   end
 
-  # def group1
-  #   @main = Main.find_by(id: params[:id])
-  #   unless @main.group == '1'
-  #     redirect_to main_path(@main)
-  #   end
-  # end
+  def group1
+    @main = Main.find_by(id: params[:id])
+    unless @main.group == '1'
+      redirect_to main_path(@main)
+    end
+  end
 end

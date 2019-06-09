@@ -379,10 +379,10 @@ footer {
 }
 
 .comment-tag label {
-  color: #666666;
+  color: #acabab;
 
   padding: 5px 10px;
-  border: 1px solid #666666;
+  border: 2px solid #acabab;
   border-radius: 10px;
   margin: 6px 10px 5px 0px;
 
@@ -391,22 +391,26 @@ footer {
 
 .comment-tag input[type="radio"]:checked.siteki + label {
   color: #555555;
-  background: #ffa4a4b7;
+  background: #ffe3e3de;
+  border-color: #f0b4b4;
 }
 
 .comment-tag input[type="radio"]:checked.gimon + label {
   color: #555555;
-  background: #ccffa3a9;
+  background: #e7ffd3;
+  border-color: #a5df76;
 }
 
 .comment-tag input[type="radio"]:checked.kanso + label {
   color: #555555;
-  background: #ffe48ac0;
+  background: #aff8dc7e;
+  border-color: #83dfbcd2;
 }
 
 .comment-tag input[type="radio"]:checked.sonota + label {
   color: #555555;
   background: #fffae2;
+  border-color: #ebdfa8; 
 }
 
 /* コメントタグ */
@@ -415,24 +419,29 @@ footer {
   border-radius: 5px;
 }
 
+.subete {
+  background: #fff9ed;
+  border-color: #e6b760;
+}
+
 .siteki {
-  background: #ffbebe;
-  border-color: #ffbebe;
+  background: #ffe3e3de;
+  border-color: #f0b4b4;
 }
 
 .gimon {
-  background: #ccffa3a9;
-  border-color: #ccffa3a9;
+  background: #e7ffd3;
+  border-color: #a5df76;
 }
 
 .kanso {
-  background: #ffe48ac0;
-  border-color: #ffe48ac0;
+  background: #aff8dc7e;
+  border-color: #83dfbcd2;
 }
 
 .sonota {
   background: #fffae2;
-  border-color: #fffae2;
+  border-color: #ebdfa8;
 }
 
 /* コメント表示 */

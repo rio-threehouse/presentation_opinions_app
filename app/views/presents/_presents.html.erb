@@ -13,7 +13,7 @@
       <% if present.user == current_user %>
         <%= link_to owner_present_path(present)  do %>
           <div class='small-btn text-center'>
-            <i class="fas fa-tags"></i> アンケート集計結果
+            アンケート集計結果 <br> <%= present.comments.count %>
           </div>
         <% end %>
       <% end %>
