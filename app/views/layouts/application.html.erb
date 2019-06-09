@@ -19,12 +19,18 @@
     <%= render 'layouts/navbar' %>
     <% if logged_in? %>
       <div class="container">
-    <% end %>
-      <%= render 'layouts/flash_messages' %>
-      <%= breadcrumbs separator: " &rsaquo; " %>
+        <%= render 'layouts/flash_messages' %>
+        <%= breadcrumbs separator: " &rsaquo; " %>
+
+        <%= yield %>
+      </div>
+    <% else %>
+      <div class="container">
+        <%= render 'layouts/flash_messages' %>
+      </div>
 
       <%= yield %>
-    </div>
+    <% end %>
   </body>
 
   <footer>

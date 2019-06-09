@@ -41,6 +41,7 @@ a:hover {
   font-weight: 400;
   margin-bottom: 10px;
   padding: 10px 10px; 
+  border-radius: 5px;
 }
 
 .nomaltilte {
@@ -363,6 +364,7 @@ footer {
   color: #ffffff;
   background: #8b1c48;
   border: 2px solid #8b1c48;
+  border-radius: 10px;
 }
 
 .small-btn:hover {
