@@ -33,7 +33,7 @@ crumb :main_manage do |main|
 end
 
 crumb :present do |present|
-  link present.title, present_path(present)
+  link 'アンケート', present_path(present)
 
   if present.research == 'フィールドサイエンス'
     parent :main_field, present.main

@@ -12,7 +12,7 @@
         <h4 class="present-title"><%= present.title %></h4>
       <% if present.user == current_user %>
         <%= link_to owner_present_path(present)  do %>
-          <div class='ownerbtn'>
+          <div class='small-btn text-center'>
             <i class="fas fa-tags"></i> アンケート集計結果
           </div>
         <% end %>

@@ -1,9 +1,18 @@
 <% breadcrumb :present, @present %>
 <div class="row">
   <div class="col-sm-8 col-sm-offset-2">
+    <div class="pagetitle zemitiltepage">
+      <span style="font-size: 12px">
+        <%= @present.main.date.strftime('%Y/%m/%d') %>
+        <i class="far fa-clock"></i> <%= @present.main.time %>
+      </span>
+      <div class="zemititle  text-center">
+        <%=  @present.main.title %>
+      </div>
+    </div>
     <div class="panel">
       <div class="panel-heading">
-        <span><%= @present.user.name %> <%= render 'mains/research_tag', present: @present %></span>
+        <span><%= render 'mains/research_tag', present: @present %> <%= @present.user.name %> </span>
         <h4><%= @present.title %></h4>
       </div>
       <div class="panel-body">
@@ -29,10 +38,10 @@
             </div>
 
             <%= hidden_field_tag :present_id, @present.id %>
-            ※このコメントは発表者のみに公開されます<br>
+            ※この投稿は匿名で発表者のみに公開されます<br>
             ※タグを指定しないとコメントボタンは押せません
 
-            <%= f.submit 'コメントする', class: 'collapse-btn' %>
+            <%= f.submit '投稿する', class: 'small-btn' %>
           <% end %>
         </div>
       </div>
@@ -40,13 +49,8 @@
   </div>
 
   <div class="col-sm-8 col-sm-offset-2">
-    <div class="panel">
-      <div class="panel-heading text-center">
-        投稿コメント一覧
-      </div>
-      <div class="panel-body">
-        <%= render 'comments/comments', comments: @comments %>
-      </div>
+    <div class="panel-body">
+      <%= render 'comments/comments', comments: @comments %>
     </div>
   </div>
 </div>

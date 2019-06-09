@@ -1,11 +1,10 @@
-<span class="
-            <% if present.research == 'フィールドサイエンス' %>
+<span class="<% if present.user.research == 'フィールドサイエンス' %>
               field
-            <% elsif present.research == 'ヒューマンサイエンス' %>
+            <% elsif present.user.research == 'ヒューマンサイエンス' %>
               human
-            <% elsif present.research == 'データサイエンス' %>
+            <% elsif present.user.research == 'データサイエンス' %>
               data
-            <% elsif present.research == 'ライフスタイル' %>
+            <% elsif present.user.research == 'ライフスタイル' %>
               life
             <% else %>
               manage

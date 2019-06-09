@@ -118,7 +118,7 @@ header {
 .nomal-btn {
   color: #fff;
   background: #8b1c48;
-  border: 1px solid #8b1c48;
+  border: 2px solid #8b1c48;
   border-radius: 0px;
   padding: 10px 16px;
   margin: 10px 20px;
@@ -169,13 +169,13 @@ header {
 
   color: #e06c00;
   background: #fff;
-  border: 1px solid #e06c00;
+  border: 2px solid #e06c00;
   padding: 5px;
 }
 
 .back-btn:hover {
   color: #ff7b00;
-  border: 1px solid #ff7b00;
+  border: 2px solid #ff7b00;
 }
 
 /* パネル */
@@ -349,13 +349,19 @@ footer {
   border-color: #a066c6;
 }
 
-/* 開閉ボタン */
-.collapse-btn {
+/* 基本ボタン小 */
+.small-btn {
   width: 90%;
   margin: 2% 5%;
+  position: relative;
 
+  color: #ffffff;
+  background: #8b1c48;
+  border: 2px solid #8b1c48;
+}
+
+.small-btn:hover {
   color: #8b1c48;
-  border: 1px solid #8b1c48;
   background: #ffffff;
 }
 
