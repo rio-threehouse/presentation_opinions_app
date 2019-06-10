@@ -362,13 +362,13 @@ footer {
   position: relative;
 
   color: #ffffff;
-  background: #8b1c48;
-  border: 2px solid #8b1c48;
+  background: #a82b5d;
+  border: 2px solid #a82b5d;
   border-radius: 10px;
 }
 
 .small-btn:hover {
-  color: #8b1c48;
+  color: #a82b5d;
   background: #ffffff;
 }
 
@@ -465,9 +465,9 @@ footer {
   margin: 25px 3px 3px 3px;
 }
 
-.present-title {
+/* .present-title {
   margin: 20px 0px;
-}
+} */
 /* カウントバッチ */
 .badge {
   background: #ffffff;
@@ -482,7 +482,6 @@ footer {
 }
 
 .mybtn {
-  color: #fff;
-  background: #8b1c48;
-  border-color: #8b1c48;
+  color: #8b1c48;
+  border: 3px solid #8b1c48;
 }

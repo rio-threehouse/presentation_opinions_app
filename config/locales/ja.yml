@@ -1,8 +1,9 @@
 ja:
-  # userのエラーメッセージ
+  # user、コメントのエラーメッセージ
   activerecord:
     models:
       user: ユーザ
+      # comment: コメント
     attributes:
       user:
         name: 名前
@@ -10,12 +11,9 @@ ja:
         research: 所属
         password: パスワード
         password_confirmation: パスワード確認
-    models:
-      comment: コメント
-    attributes:
-      comment:
-        comment: コメント
-        
+      # comment:
+        # comment: コメント
+    
   # ページネーション
   views:
     pagination:

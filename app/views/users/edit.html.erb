@@ -1,77 +1,78 @@
 <div class="row">
   <div class="col-sm-8 col-sm-offset-2">
-    <div class="panel">
-      <div class="panel-heading text-center">
-        <i class="fas fa-user"></i> マイページ
-      </div>
-      <div class="panel-body">
-        <ul>
-          <li class="text-center">
-            <%= link_to user_path(current_user) do %>
-              <span class="<%= 'mybtn' if current_page?(user_path(current_user)) %> btn select-btn">
-                登録した報告会内容一覧
-              </span>
-            <% end %>
-            <%= link_to edit_user_path(current_user) do %>
-              <span class="<%= 'mybtn' if current_page?(edit_user_path(current_user)) %> btn select-btn">
-                ユーザ設定
-              </span>
-            <% end %>
-          </li>
-          <li>
-            <%= form_for(current_user) do |f| %>
-              <%= render 'layouts/error_messages', model: f.object %>
-              <div class="form-group">
+    <div class='pagetitle nomaltilte text-center'>
+      マイページ
+    </div>
+    
+    <div class='select-format text-center'>
+      <%= link_to user_path(current_user) do %>
+        <span class="<%= 'mybtn' if current_page?(user_path(current_user)) %> btn select-btn">
+          登録した報告会内容一覧
+        </span>
+      <% end %>
+      <%= link_to edit_user_path(current_user) do %>
+        <span class="<%= 'mybtn' if current_page?(edit_user_path(current_user)) %> btn select-btn">
+          ユーザ設定
+        </span>
+      <% end %>
+    </div>
 
-                <%= f.label :name, '名前' %>
-                <%= f.text_field :name, class: 'form-control', placeholder: 'ex.自由花子（漢字フルネーム）', required: true %>
-              </div>
-              
-              <div class="form-group">
-                <%= f.label :name_read, 'ふりがな' %>
-                <%= f.text_field :name_read, class: 'form-control', placeholder: 'ex.じゆうはなこ', required: true %>
-              </div>
+    <div class="jumbotron">
+      <div class="text-center">
+        <p>ユーザ設定の変更</p>
+      </div> 
 
-              <div class="form-group">
-              <%= f.label :research, '所属'%><br>
-              <%= f.select :research, [['教職員','teachre'],
-                                        ['農芸','農芸'],['樹木','樹木'],['草本・潅木','草本'],
-                                        ['食','食'],['図書・記録資料','図書'],['資源・エネルギー','資源'],
-                                        ['フィールドサイエンス','フィールドサイエンス'],['ヒューマンサイエンス','ヒューマンサイエンス'],
-                                        ['データサイエンス','データサイエンス'],['ライフスタイル','ライフスタイル'],
-                                        ['マネジメント','マネジメント']],
-                                        class: 'form-control' %>
-              </div>
+      <%= form_for(current_user) do |f| %>
+        <%= render 'layouts/error_messages', model: f.object %>
+        <div class="form-group">
 
-              <button type="button" class="small-btn" data-toggle="collapse" data-target="#password">
-                パスワード設定
-              </button>
-
-              <div class="collapse" id="password">
-                <div class="form-group">
-                  <%= f.label :password, 'パスワード'%>
-                  <%= f.password_field :password, class: 'form-control', placeholder: '空欄の場合パスワードは変わりません' %>
-                </div>
-
-                <div class="form-group">
-                  <%= f.label :password_confirmation, 'パスワード確認' %>
-                  <%= f.password_field :password_confirmation, class: 'form-control' %>
-                </div>
-              </div>
-
-              <div class="text-center">
-                <%= f.submit '変更', class: 'btn nomal-btn'%>
-              </div>
-            <% end %>  
-          </li>
-          <%= link_to user_path(current_user), method: :delete,data: {confirm: "アカウントが削除されます。本当に削除しますか？"} do %>
-            <div class="text-center">
-              <i class="far fa-trash-alt"></i><br>
-              アカウントを削除する
-            </div>
-          <% end %>
+          <%= f.label :name, '名前' %>
+          <%= f.text_field :name, class: 'form-control', placeholder: 'ex.自由花子（漢字フルネーム）', required: true %>
         </div>
-      </div>
+        
+        <div class="form-group">
+          <%= f.label :name_read, 'ふりがな' %>
+          <%= f.text_field :name_read, class: 'form-control', placeholder: 'ex.じゆうはなこ', required: true %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :research, '所属'%><br>
+          <%= f.select :research, [['教職員','teachre'],
+                                    ['農芸','農芸'],['樹木','樹木'],['草本・潅木','草本'],
+                                    ['食','食'],['図書・記録資料','図書'],['資源・エネルギー','資源'],
+                                    ['フィールドサイエンス','フィールドサイエンス'],['ヒューマンサイエンス','ヒューマンサイエンス'],
+                                    ['データサイエンス','データサイエンス'],['ライフスタイル','ライフスタイル'],
+                                    ['マネジメント','マネジメント']],
+                                    class: 'form-control' %>
+        </div>
+
+        <button type="button" class="small-btn" data-toggle="collapse" data-target="#password">
+          パスワード設定
+        </button>
+
+        <div class="collapse" id="password">
+          <div class="form-group">
+            <%= f.label :password, 'パスワード'%>
+            <%= f.password_field :password, class: 'form-control', placeholder: '空欄の場合パスワードは変わりません' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :password_confirmation, 'パスワード確認' %>
+            <%= f.password_field :password_confirmation, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <%= f.submit '変更', class: 'btn nomal-btn'%>
+        </div>
+      <% end %>  
+          
+      <%= link_to user_path(current_user), method: :delete,data: {confirm: "アカウントが削除されます。本当に削除しますか？"} do %>
+        <div class="text-center">
+          <i class="far fa-trash-alt"></i><br>
+          アカウントを削除する
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

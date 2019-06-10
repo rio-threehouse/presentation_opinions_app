@@ -1,54 +1,50 @@
 <div class="row">
   <div class="col-sm-8 col-sm-offset-2">
-    <div class="panel">
-      <div class="panel-heading text-center">
-        <i class="fas fa-user"></i> マイページ
-      </div>
-      <div class="panel-body">
-        <ul>
-          <li class="text-center">
-            <%= link_to user_path(current_user) do %>
-              <span class="<%= 'mybtn' if current_page?(user_path(current_user)) %> btn select-btn">
-                登録した報告会内容一覧
-              </span>
-            <% end %>
-            <%= link_to edit_user_path(current_user) do %>
-              <span class="<%= 'mybtn' if current_page?(edit_user_path(current_user)) %> btn select-btn">
-                ユーザ設定
-              </span>
-            <% end %>
-          </li>
-          <% @presents.each do |present| %>
-            <li>
-              <div class="text-center">
-                <span class="text-muted">
-                  <%= present.main.date.strftime('%Y/%m/%d') %>
-                  <i class="far fa-clock"></i> <%= present.main.time %>
-                </span> 
-                <h4><%= present.main.title %></h4>
-              </div>
-              <div class="mypresent">
-                <%= link_to '', present, class: 'linkbox'%>
-                <span class="pull-right">
-                  <% if present.user == current_user %>
-                    <%= link_to '変更', edit_present_path(present), class: 'edit-btn' %>
-                    <%= link_to '削除', present_path(present), class: 'delete-btn', method: :delete, data: {confirm: "この報告内容に関連する投稿が全て削除されます。本当に削除しますか？"} %>
-                  <% end %>
-                </span>
-                <span><%= render 'mains/research_tag', present: present %></span>
-                  <div class="present-title"><%= present.title %></div>
-                <% if present.user == current_user %>
-                  <%= link_to owner_present_path(present)  do %>
-                    <div class='ownerbtn'>
-                      <i class="fas fa-tags"></i> アンケート集計結果
-                    </div>
-                  <% end %>
-                <% end %>
-              </div>
-            </li>          
-          <% end %>        
-        </ul>           
-      </div>
+    <div class='pagetitle nomaltilte text-center'>
+      マイページ
     </div>
+    
+    <div class='select-format text-center'>
+      <%= link_to user_path(current_user) do %>
+        <span class="<%= 'mybtn' if current_page?(user_path(current_user)) %> btn select-btn">
+          登録した報告会内容一覧
+        </span>
+      <% end %>
+      <%= link_to edit_user_path(current_user) do %>
+        <span class="<%= 'mybtn' if current_page?(edit_user_path(current_user)) %> btn select-btn">
+          ユーザ設定
+        </span>
+      <% end %>
+    </div>
+    
+    <div class="panel-body">
+      <% @presents.each do |present| %>
+        <li class="p">
+          <div class="text-center">
+            <span class="text-muted">
+              <%= present.main.date.strftime('%Y/%m/%d') %>
+              <i class="far fa-clock"></i> <%= present.main.time %>
+            </span> 
+            <h4><%= present.main.title %></h4>
+          </div>
+
+          <div class="mypresent">
+            <%= link_to '', present, class: 'linkbox'%>
+            <span class="pull-right">
+              <%= link_to '変更', edit_present_path(present), class: 'edit-btn' %>
+              <%= link_to '削除', present_path(present), class: 'delete-btn', method: :delete, data: {confirm: "この報告内容に関連する投稿が全て削除されます。本当に削除しますか？"} %>
+            </span>
+            <span><%= render 'mains/research_tag', present: present %> <%= present.user.name %></span>
+            <h4 class="present-title"><%= present.title %></h4>
+            <%= link_to owner_present_path(present)  do %>
+              <div class='small-btn text-center'>
+                アンケート集計結果 <br> <%= present.comments.count %>
+              </div>
+            <% end %>
+          </div>
+        </li>          
+      <% end %>        
+    </div>
+
   </div>
 </div>

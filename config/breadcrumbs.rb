@@ -3,7 +3,7 @@ crumb :root do
 end
 
 crumb :main do |main|
-  link "報告会詳細", main_path(main)
+  link "報告会内容", main_path(main)
   parent :root
 end
 
