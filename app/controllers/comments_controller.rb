@@ -7,11 +7,13 @@ class CommentsController < ApplicationController
     @comment.present_id = params[:present_id]
 
     if @comment.save
-      flash[:success] = 'コメントを投稿しました'
+      flash[:success] = '投稿しました'
       redirect_back(fallback_location: root_path)
     else
-      flash[:danger] = 'コメントの投稿に失敗しました'
-      redirect_back(fallback_location: root_path)
+      @present = Present.find(params[:present_id])
+      @comments = @present.comments.where(user_id: current_user.id).order('updated_at DESC')
+      flash[:danger] = '投稿に失敗しました'
+      render 'presents/show'
     end
   end
 
@@ -21,11 +23,11 @@ class CommentsController < ApplicationController
 
   def update
     if @comment.update(comment_params)
-      flash[:info] = 'コメント内容を変更しました'
+      flash[:info] = '投稿内容を変更しました'
       redirect_to @comment.present
     else
       @present = @comment.present
-      flash[:danger] = 'コメント内容の変更に失敗しました'
+      flash[:danger] = '投稿内容の変更に失敗しました'
       render :edit
     end
 
@@ -33,7 +35,7 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment.destroy
-    flash[:danger] = 'コメントを削除しました'
+    flash[:danger] = '投稿を削除しました'
     redirect_back(fallback_location: root_path)
   end
 

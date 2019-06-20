@@ -7,6 +7,7 @@
   </div>
   <div class="panel-body">
     <%= form_for(@present) do |f| %>
+      <%= render 'layouts/error_messages', model: f.object %>
       <div class="modal-body">
         <div class="form-group">
           <%= f.label :title, 'タイトル' %> <span class="text-muted small">（最大50文字）</span>

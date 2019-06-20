@@ -199,6 +199,7 @@ header {
   margin-bottom: 0px;
 }
 
+/* ボーダー線普通 */
 .panel-body li {
   list-style: none;
   padding: 10px;
@@ -207,6 +208,7 @@ header {
   position: relative; 
 }
 
+/* ボーダー線太め */
 .panel-body li.p {
   list-style: none;
   padding: 10px;

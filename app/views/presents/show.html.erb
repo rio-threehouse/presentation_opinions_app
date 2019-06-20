@@ -19,6 +19,7 @@
       <div class="panel-body">
         <div class="comment-form">
           <%= form_for(@comment) do |f| %>
+            <%= render 'layouts/error_messages', model: f.object %>
             <div class="comment-tag">
               <div>
                 <i class="fas fa-tag"></i> <span class="label label-danger">必須</span>
@@ -35,11 +36,11 @@
             </div>
 
             <div class="form-group">
-              <%= f.text_area :comment, class: 'form-control', required: true, rows: 5, placeholder: 'タグを選択してコメント内容を記入' %>
+              <%= f.text_area :comment, class: 'form-control', required: true, rows: 5, placeholder: 'タグを選択してコメント内容を記入(最大100字)' %>
             </div>
 
             <%= hidden_field_tag :present_id, @present.id %>
-            ※この投稿は匿名で発表者のみに公開されます<br>
+            ※この投稿は発表者のみに匿名で閲覧されます<br>
             ※タグを指定しないと投稿ボタンは押せません
 
             <%= f.submit '投稿する', class: 'small-btn' %>
