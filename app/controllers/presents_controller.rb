@@ -1,6 +1,7 @@
 class PresentsController < ApplicationController
   before_action :require_user_logged_in
-  before_action :present_correct_user, only:[:edit, :update, :destroy, :owner, :tag1, :tag2, :tag3, :tag4]
+  before_action :present_correct_user, only:[:edit, :update, :destroy]
+  before_action :owner_page, only:[:owner, :tag1, :tag2, :tag3, :tag4]
 
   def show
     @present = Present.find(params[:id])
@@ -85,6 +86,13 @@ class PresentsController < ApplicationController
   def present_correct_user
     @present = current_user.presents.find_by(id: params[:id])
     unless @present
+      redirect_to root_url
+    end
+  end
+
+  def owner_page
+    @present = current_user.presents.find_by(id: params[:id])
+    unless @present || current_user.research == 'teacher'
       redirect_to root_url
     end
   end
