@@ -5,7 +5,7 @@ class PresentsController < ApplicationController
 
   def show
     @present = Present.find(params[:id])
-    @comments = @present.comments.where(user_id: current_user.id).order('created_at DESC')
+    @comments = @present.comments.where(user_id: current_user.id).order('updated_at DESC')
     @comment = current_user.comments.build
   end
 
@@ -75,7 +75,7 @@ class PresentsController < ApplicationController
 
   def owner_data
     @present = Present.find(params[:id])
-    @comments = Comment.where(present_id: params[:id]).order('created_at DESC').page(params[:page])
+    @comments = Comment.where(present_id: params[:id]).order('updated_at DESC').page(params[:page])
     counts(@present)
   end
   

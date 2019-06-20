@@ -38,7 +38,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @presents = Present.where(user_id: params[:id]).order('created_at DESC')
+    @presents = Present.where(user_id: params[:id]).order('updated_at DESC')
   end
 
   private
