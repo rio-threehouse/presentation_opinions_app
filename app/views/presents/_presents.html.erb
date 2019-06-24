@@ -7,14 +7,16 @@
         <% if present.user == current_user %>
           <%= link_to '変更', edit_present_path(present), class: 'edit-btn' %>
           <%= link_to '削除', present_path(present), class: 'delete-btn', method: :delete, data: {confirm: "この報告内容に関連する投稿が全て削除されます。本当に削除しますか？"} %>
+        <% elsif current_user.comments.where(present_id: present.id) == [] %>
+          <span class='answer'>未回答</span>
         <% end %>
       </span>
       <span><%= render 'mains/research_tag', present: present %> <%= present.user.name %></span>
-        <h4 class="present-title"><%= present.title %></h4>
+      <h4 class="present-title"><%= present.title %></h4>
       <% if present.user == current_user || current_user.research == 'teacher' %>
         <%= link_to owner_present_path(present)  do %>
           <div class='small-btn text-center'>
-            アンケート集計結果 <br> <%= present.comments.count %>
+            アンケート集計 <%= present.comments.count %>
           </div>
         <% end %>
       <% end %>
