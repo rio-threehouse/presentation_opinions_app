@@ -12,31 +12,34 @@
       <div class="panel-body">
         <ul>
           <% @mains.each do |main| %>
-            <li class="p">
-            <%= link_to '', main, class: 'linkbox' %>
-              <span class="text-muted">
-                <%= main.date.strftime('%Y/%m/%d') %>
-                <i class="far fa-clock"></i> <%= main.time %>
-              </span>
-              
-              <span class="main-group">
-                <% if main.group == '0'%>
-                  <span class='group-0'>卒業勉強・卒業研究</span>
-                  <h4 class='main-title'><%= main.title %></h4>
-                <% else %>
-                  <span class='group-1'>生活経営研究実習</span>
-                  <h4 class='main-title'><%= main.title %></h4>
-                <% end %>
-              </span>
+            <li>
+              <div class="content">
+                <%= link_to '', main, class: 'linkbox' %>
 
-              <% if main.user == current_user %>
-                <div style="text-align: right">
-                  <%= link_to '変更', edit_main_path(main), class: 'edit-btn' %>
-                  <%= link_to '削除', main_path(main), class: 'delete-btn', method: :delete, data: {confirm: "この報告会に関連する内容も全て削除されます。本当に削除しますか？"} %>
-                </div>
-              <% end %>
-              
-            </li>          
+                <span class="text-muted">
+                  <%= main.date.strftime('%Y/%m/%d') %>
+                  <i class="far fa-clock"></i> <%= main.time %>
+                </span>
+                
+                <span class="main-group">
+                  <% if main.group == '0'%>
+                    <span class='group-0'>卒業勉強・卒業研究</span>
+                    <h4 class='main-title'><%= main.title %></h4>
+                  <% else %>
+                    <span class='group-1'>生活経営研究実習</span>
+                    <h4 class='main-title'><%= main.title %></h4>
+                  <% end %>
+                </span>
+
+                <% if main.user == current_user %>
+                  <div style="text-align: right">
+                    <%= link_to '変更', edit_main_path(main), class: 'edit-btn' %>
+                    <%= link_to '削除', main_path(main), class: 'delete-btn', method: :delete, data: {confirm: "この報告会に関連する内容も全て削除されます。本当に削除しますか？"} %>
+                  </div>
+                <% end %>
+              </div>
+            </li>    
+            <div class="liborder-bold"></div>      
           <% end %>        
         </ul>           
       </div>

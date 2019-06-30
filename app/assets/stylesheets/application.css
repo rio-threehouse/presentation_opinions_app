@@ -199,20 +199,27 @@ header {
   margin-bottom: 0px;
 }
 
-/* ボーダー線普通 */
+/* パネルのli */
 .panel-body li {
   list-style: none;
-  padding: 10px;
-  border-bottom: 3px solid #efefef;
-  /* リンク全面 */
-  position: relative; 
 }
 
-/* ボーダー線太め */
-.panel-body li.p {
-  list-style: none;
+/* liの区切り */
+.liborder {
+  height: 3px;
+  background-color: #efefef;
+}
+
+.liborder-bold {
+  height: 10px;
+  background-color: #efefef;
+}
+
+/* コンテンツ */
+.content {
   padding: 10px;
-  border-bottom: 15px solid #efefef;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #c5c5c5;
   /* リンク全面 */
   position: relative; 
 }
