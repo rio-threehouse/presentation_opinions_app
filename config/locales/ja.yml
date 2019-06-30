@@ -1,9 +1,11 @@
 ja:
-  # user、コメントのエラーメッセージ
+  # エラーメッセージ日本語化
   activerecord:
     models:
       user: ユーザ
-      # comment: コメント
+      comment: コメント
+      present: 報告会内容
+      main: 報告会
     attributes:
       user:
         name: 名前
@@ -13,6 +15,11 @@ ja:
         password_confirmation: パスワード確認
       comment:
         comment: コメント
+      present:
+        title: タイトル
+      main:
+        title: タイトル
+        time: 時間
     
   # ページネーション
   views:

@@ -1,6 +1,7 @@
 <%# 報告会フォーム %>
 <%= form_for(main) do |f| %>
   <div class="modal-body">
+    <%= render 'layouts/error_messages', model: f.object %>
     <div class="form-group">
       <%= f.label :title, '報告会名' %> <span class="text-muted small">（最大50文字）</span>
       <%= f.text_field :title, class: 'form-control', required: true %>
