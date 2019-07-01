@@ -211,7 +211,7 @@ header {
 }
 
 .liborder-bold {
-  height: 10px;
+  height: 15px;
   background-color: #efefef;
 }
 
@@ -336,7 +336,7 @@ footer {
 /* ゼミボタン・タグ */
 .all {
   color: #c08e59;
- border-color: #c08e59;
+  border-color: #c08e59;
 }
 
 .field {
@@ -380,6 +380,18 @@ footer {
   color: #a82b5d;
   background: #ffffff;
 }
+
+/* ポジションなし */
+.small-btn2 {
+  color: #ffffff;
+  background: #a82b5d;
+  border: 2px solid #a82b5d;
+  border-radius: 10px;
+  font-size: 12px;
+  padding:3px;
+  margin-left: 10px;
+}
+  
 
 /* コメント */
 .comment-form {

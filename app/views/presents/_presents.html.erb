@@ -14,7 +14,7 @@
         </span>
         <span><%= render 'mains/research_tag', present: present %> <%= present.user.name %></span>
         <h4 class="present-title"><%= present.title %></h4>
-        <% if present.user == current_user || current_user.research == 'teacher' %>
+        <% if current_user.research == 'teacher' %>
           <%= link_to owner_present_path(present)  do %>
             <div class='small-btn text-center'>
               アンケート集計 <%= present.comments.count %>

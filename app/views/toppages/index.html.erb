@@ -22,13 +22,12 @@
                 </span>
                 
                 <span class="main-group">
-                  <% if main.group == '0'%>
+                  <% if main.group == '0' %>
                     <span class='group-0'>卒業勉強・卒業研究</span>
-                    <h4 class='main-title'><%= main.title %></h4>
                   <% else %>
                     <span class='group-1'>生活経営研究実習</span>
-                    <h4 class='main-title'><%= main.title %></h4>
                   <% end %>
+                  <h4 class='main-title'><%= main.title %></h4>
                 </span>
 
                 <% if main.user == current_user %>
