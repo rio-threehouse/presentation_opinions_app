@@ -383,13 +383,13 @@ footer {
 
 /* ポジションなし */
 .small-btn2 {
+  width: 90%;
+  margin: 2% 5%;
+
   color: #ffffff;
   background: #a82b5d;
   border: 2px solid #a82b5d;
   border-radius: 10px;
-  font-size: 12px;
-  padding:3px;
-  margin-left: 10px;
 }
   
 
@@ -509,8 +509,33 @@ footer {
 
 /* 未回答ボタン */
 .answer {
-  padding: 5px 10px;
+  font-size: 14px;
+  padding: 3px 15px;
   color: #808080;
   border: 2px solid #808080;
   border-radius: 5px;
+  animation: answer 2s infinite;
+}
+
+@keyframes answer {
+  0% {
+    color: #808080;
+    border: 2px solid #808080;
+  } 
+  50% {
+    color: #b33467;
+    border: 2px solid #b33467;
+  } 
+  100% {
+    color: #808080;
+    border: 2px solid #808080;
+  }
+}
+
+/* 報告会矢印 */
+.arrow {
+  width: 15px;
+  text-align: center;
+  color: #8b1c48;
+  margin-right: 5px;
 }

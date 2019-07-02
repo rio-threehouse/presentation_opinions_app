@@ -15,7 +15,7 @@
             <li>
               <div class="content">
                 <%= link_to '', main, class: 'linkbox' %>
-
+                
                 <span class="text-muted">
                   <%= main.date.strftime('%Y/%m/%d') %>
                   <i class="far fa-clock"></i> <%= main.time %>
@@ -27,7 +27,12 @@
                   <% else %>
                     <span class='group-1'>生活経営研究実習</span>
                   <% end %>
-                  <h4 class='main-title'><%= main.title %></h4>
+                  <h4 class='main-title'>
+                    <% if main.date == Date.today %>
+                      <span class="arrow"><i class="fas fa-arrow-right faa-horizontal animated"></i></span> 
+                    <% end %>
+                    <%= main.title %>
+                  </h4>
                 </span>
 
                 <% if main.user == current_user %>
