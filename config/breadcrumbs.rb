@@ -1,10 +1,5 @@
-crumb :root do
-  link "報告会一覧", root_path
-end
-
 crumb :main do |main|
-  link "報告会内容", main_path(main)
-  parent :root
+  link main.title, main_path(main)
 end
 
 crumb :main_field do |main|

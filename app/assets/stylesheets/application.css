@@ -76,22 +76,45 @@ header {
 }
 
 .logo {
-  /* margin: 15px 20px; */
-  margin-top: 15px;
-  margin-bottom: 15px;
-  margin-left: 5%;
-  width: 150px;
+  margin: 10px 0 10px 5%;
+  width: 100px;
 }
 
-.nav .btn {
-  font-size: 9px;
+/* メニューボタン */
+.menu {
+  font-size: 20px;
+  color: #8b1c48;
+  margin-right: 3%;
+}
+
+/* ログイン後ナビバー二段目 */
+.submenu  {
+  padding: 0 10%;
+  color: #9b9b9b;
+}
+
+.activesubmenu {
+  color: #8b1c48;
+  border-radius: 0;
+  border-bottom: 2px solid #8b1c48;
+}
+
+/* アカウント登録・ログイン */
+.nav1 {
+  font-size: 10px;
   padding: 0px;
-  margin-top: 13px;
-  margin-right: 5%;
+  margin-top: 10px;
+  margin-right: 4%;
+  color: #9b9b9b;
 }
 
 .navicon {
-  font-size: 16px;
+  font-size: 15px;
+  color: #9b9b9b;
+}
+
+.currentnav {
+  color: #8b1c48;
 }
 
 /* パンくずリスト */

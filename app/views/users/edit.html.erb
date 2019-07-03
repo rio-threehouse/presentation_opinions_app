@@ -1,23 +1,6 @@
-<%# マイページ　ユーザ設定 %>
+<%# ユーザ設定 %>
 <div class="row">
   <div class="col-sm-8 col-sm-offset-2">
-    <div class='pagetitle nomaltilte text-center'>
-      マイページ
-    </div>
-    
-    <div class='select-format text-center'>
-      <%= link_to user_path(current_user) do %>
-        <span class="<%= 'mybtn' if current_page?(user_path(current_user)) %> btn select-btn">
-          登録した報告会内容一覧
-        </span>
-      <% end %>
-      <%= link_to edit_user_path(current_user) do %>
-        <span class="<%= 'mybtn' if current_page?(edit_user_path(current_user)) %> btn select-btn">
-          ユーザ設定
-        </span>
-      <% end %>
-    </div>
-
     <div class="jumbotron">
       <div class="text-center">
         <p>ユーザ設定の変更</p>
