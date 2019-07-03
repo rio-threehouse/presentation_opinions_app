@@ -1,31 +1,31 @@
 <%# コメント投稿タグ %>
 <div class="select-format text-center">
   <%= link_to owner_present_path(present) do %>
-    <span class="<%= 'subete' if current_page?(owner_present_path(present)) %> btn select-btn">
+    <span class="<%= 'subete' if current_page?(owner_present_path(present)) %> button select-btn">
       全て<br>
       <%= @comment_counts %>
     </span>
   <% end %>
   <%= link_to tag1_present_path(present) do %>
-    <span class="<%= 'siteki' if current_page?(tag1_present_path(present)) %> btn select-btn">
+    <span class="<%= 'siteki' if current_page?(tag1_present_path(present)) %> button select-btn">
       指摘<br>
       <%= @tag1_counts %>
     </span>
   <% end %>
   <%= link_to tag2_present_path(present) do %>
-    <span class="<%= 'gimon' if current_page?(tag2_present_path(present)) %> btn select-btn">
+    <span class="<%= 'gimon' if current_page?(tag2_present_path(present)) %> button select-btn">
       疑問<br>
       <%= @tag2_counts %>
     </span>
   <% end %>
   <%= link_to tag3_present_path(present) do %>
-    <span class="<%= 'kanso' if current_page?(tag3_present_path(present)) %> btn select-btn">
+    <span class="<%= 'kanso' if current_page?(tag3_present_path(present)) %> button select-btn">
       感想<br>
       <%= @tag3_counts %>
     </span>
   <% end %>
   <%= link_to tag4_present_path(present) do %>
-    <span class="<%= 'sonota' if current_page?(tag4_present_path(present)) %> btn select-btn">
+    <span class="<%= 'sonota' if current_page?(tag4_present_path(present)) %> button select-btn">
       その他<br>
       <%= @tag4_counts %>
     </span>

@@ -1,32 +1,32 @@
 <%# ゼミ別ボタン %>
 <div class="select-format text-center">
   <%= link_to main do %>
-    <span class="<%= 'all' if current_page?(main) %> btn select-btn">
+    <span class="<%= 'all' if current_page?(main) %> button select-btn">
       全て
     </span>
   <% end %>
   <%= link_to field_main_path(main) do %>
-    <span class="<%= 'field' if current_page?(field_main_path(main)) %> btn select-btn">
+    <span class="<%= 'field' if current_page?(field_main_path(main)) %> button select-btn">
       フィールド
     </span>
   <% end %>
   <%= link_to human_main_path(main) do %>
-    <span class="<%= 'human' if current_page?(human_main_path(main)) %> btn select-btn">
+    <span class="<%= 'human' if current_page?(human_main_path(main)) %> button select-btn">
       ヒューマン
     </span>
   <% end %>
   <%= link_to data_main_path(main) do %>
-    <span class="<%= 'data' if current_page?(data_main_path(main)) %> btn select-btn">
+    <span class="<%= 'data' if current_page?(data_main_path(main)) %> button select-btn">
       データ
     </span>
   <% end %>
   <%= link_to life_main_path(main) do %>
-    <span class="<%= 'life' if current_page?(life_main_path(main)) %> btn select-btn">
+    <span class="<%= 'life' if current_page?(life_main_path(main)) %> button select-btn">
       ライフスタイル
     </span>
   <% end %>
   <%= link_to manage_main_path(main) do %>
-    <span class="<%= 'manage' if current_page?(manage_main_path(main)) %> btn select-btn">
+    <span class="<%= 'manage' if current_page?(manage_main_path(main)) %> button select-btn">
       マネジメント
     </span>
   <% end %>

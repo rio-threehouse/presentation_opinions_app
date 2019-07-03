@@ -2,7 +2,7 @@
   <span class="nav">
     <a href="/"><img src="/images/navlogo.png" alt="報告会アンケート" class="logo"></a>
     <% if logged_in? %>
-      <span class="dropdown pull-right text-center btn menu">
+      <span class="dropdown pull-right text-center button menu">
         <span class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
           <i class="fas fa-bars"></i>
         </span>
@@ -23,12 +23,12 @@
 
       <div class="text-center">
         <%= link_to root_path do %>
-          <span class="btn text-center submenu <%= 'activesubmenu' if current_page?(root_path) %>">
+          <span class="button text-center submenu <%= 'activesubmenu' if current_page?(root_path) %>">
             <i class="fas fa-calendar"></i> 報告会一覧
           </span>
         <% end %>
         <%= link_to user_path(current_user) do %>
-          <span class="btn text-center submenu <%= 'activesubmenu' if current_page?(user_path(current_user)) %>">
+          <span class="button text-center submenu <%= 'activesubmenu' if current_page?(user_path(current_user)) %>">
             <i class="fas fa-bookmark"></i> アンケート集計
           </span>
         <% end %>
@@ -36,13 +36,13 @@
 
     <% else %>
       <%= link_to login_path do %>
-        <span class="btn text-center pull-right nav1 <%= 'currentnav' if current_page?(login_path) %>">
+        <span class="button text-center pull-right nav1 <%= 'currentnav' if current_page?(login_path) %>">
           <i class="fas fa-sign-in-alt navicon <%= 'currentnav' if current_page?(login_path) %>"></i>
           <br>ログイン
         </span>
       <% end %>
       <%= link_to signup_path do %>
-        <span class="btn text-center pull-right nav1 <%= 'currentnav' if current_page?(signup_path) %>">
+        <span class="button text-center pull-right nav1 <%= 'currentnav' if current_page?(signup_path) %>">
           <i class="fas fa-user-plus navicon <%= 'currentnav' if current_page?(signup_path) %>"></i>
           <br>アカウント登録
         </span>
