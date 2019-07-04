@@ -510,39 +510,29 @@ footer {
   border-color: #ebdfa8;
 }
 
-/* コメント表示 */
+/* コメント内容 */
 .comment {
   margin-top: 10px;
 }
 
-/* オーナーボタン */
-.ownerbtn {
-  position: relative;
-  color: #8b1c48;
-  text-align: center;
-  border: 2px solid #8b1c48;
-  margin: 25px 3px 3px 3px;
-}
-
-/* .present-title {
-  margin: 20px 0px;
-} */
-/* カウントバッチ */
-.badge {
-  background: #ffffff;
-  color: #696969;
-  border: 1px solid #c4c4c4;
-}
-
-/* マイページ */
+/* アンケート集計 */
 .mypresent {
   border-top: 1px dotted #d3d3d3;
   padding: 10px 0px;
 }
 
-.mybtn {
+/* アンケートメニュー */
+.ownermenu {
+  margin-bottom: 10px;
+}
+.ownerbtn {
+  padding: 0 35px;
+  color: #8a8a8a;
+}
+
+.activeownerbtn {
   color: #8b1c48;
-  border: 3px solid #8b1c48;
+  border-bottom: 2px solid #8b1c48;
 }
 
 /* 未回答ボタン */
@@ -576,4 +566,20 @@ footer {
   text-align: center;
   color: #8b1c48;
   margin-right: 5px;
+}
+
+/* チェックボタン */
+.checkbtn {
+  font-size: 24px;
+  display: block;
+  margin: 0 0 0 auto;
+  background: #fff;
+  border: 0;
+  padding: 0;
+  line-height: 0;
+  color: #bebebe;
+}
+
+.checked {
+  color: #8b1c48;
 }

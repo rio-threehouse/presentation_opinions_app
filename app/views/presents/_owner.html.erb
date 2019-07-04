@@ -1,18 +1,13 @@
-<%# マイページ雛形 %>
+<%# オーナー雛形 %>
 <% breadcrumb :present_owner, present %>
 <div class="row"> 
   <div class="col-sm-8 col-sm-offset-2">
-    <div class="pagetitle nomaltilte">
-      <div class="text-center">
-        <div style="font-size:12px"><%=  present.title %></div>
-        アンケート集計結果        
-      </div>
-    </div>
-
+    <%= render 'presents/owner_check_top', present: present %>
+    
     <%= render 'presents/commenttag_btn', present: present %>
     
     <div class="panel-body">
-      <%= render 'comments/comments', comments: comments %>
+      <%= render 'comments/comments', comments: comments, present: present %>
       <div class="text-center">
         <%= paginate comments %>
       </div>

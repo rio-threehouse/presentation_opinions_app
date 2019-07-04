@@ -13,6 +13,9 @@
         <div class=comment>
           <%= simple_format(comment.comment) %>
         </div>
+        <% if present.user == current_user || current_user.research == 'teacher' %>
+          <%= render 'checks/check_btn', comment: comment %>
+        <% end %>
       </div>
     </li>
     <div class="liborder"></div>

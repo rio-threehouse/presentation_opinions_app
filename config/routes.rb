@@ -27,8 +27,12 @@ Rails.application.routes.draw do
       get :tag2
       get :tag3
       get :tag4
+
+      get :check
     end
   end
 
   resources :comments, only: [:create, :edit, :update, :destroy]
+
+  resources :checks, only: [:create, :destroy]
 end

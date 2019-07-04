@@ -23,8 +23,14 @@
 </div>
 
 <%# フォームボタン %>
-<% if @current_user_present %>
-  <%= render 'presents/present_form', present: @current_user_present, main: @main %>
-<% else %>
-  <%= render 'presents/present_form', present: @present, main: @main %>
-<% end %>
+<%# <% if current_user.research == 'フィールドサイエンス' ||
+      current_user.research == 'ヒューマンドサイエンス' ||
+      current_user.research == 'データドサイエンス' ||
+      current_user.research == 'ライフスタイル' ||
+      current_user.research == 'マネジメント' || %> 
+  <% if @current_user_present %>
+    <%= render 'presents/present_form', present: @current_user_present, main: @main %>
+  <% else %>
+    <%= render 'presents/present_form', present: @present, main: @main %>
+  <% end %>
+<%# <% end %> 

@@ -1,7 +1,7 @@
 class PresentsController < ApplicationController
   before_action :require_user_logged_in
   before_action :present_correct_user, only:[:edit, :update, :destroy]
-  before_action :owner_page, only:[:owner, :tag1, :tag2, :tag3, :tag4]
+  before_action :owner_page, only:[:owner, :tag1, :tag2, :tag3, :tag4, :check]
 
   def show
     @present = Present.find(params[:id])
@@ -71,6 +71,11 @@ class PresentsController < ApplicationController
     @tag4 = @comments.where(tag: 'その他').page(params[:page])
   end
 
+  def check
+    @present = Present.find(params[:id])
+    @check_comments = current_user.check_comments.where(present_id: params[:id]).order('updated_at DESC').page(params[:page])
+  end
+ 
   private
 
   def owner_data

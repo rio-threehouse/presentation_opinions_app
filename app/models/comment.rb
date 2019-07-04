@@ -4,4 +4,6 @@ class Comment < ApplicationRecord
 
   validates :comment, presence: true, length: { maximum: 100 }
   validates :tag, presence: true
+
+  has_many :checks, dependent: :destroy
 end

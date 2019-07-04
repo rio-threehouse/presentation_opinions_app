@@ -1,0 +1,13 @@
+<% breadcrumb :present_owner, @present %>
+<div class="row"> 
+  <div class="col-sm-8 col-sm-offset-2">
+    <%= render 'presents/owner_check_top', present: @present %>
+        
+    <div class="panel-body">
+      <%= render 'comments/comments', comments: @check_comments, present: @present %>
+      <div class="text-center">
+        <%= paginate @check_comments %>
+      </div>
+    </div>
+  </div>
+</div>

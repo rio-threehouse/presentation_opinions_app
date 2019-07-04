@@ -1,0 +1,19 @@
+<%# 上部分雛形 %>
+<div class="pagetitle nomaltilte">
+  <div class="text-center">
+    <div style="font-size:12px"><%=  present.title %></div>
+  </div>
+</div>
+
+<div class="text-center ownermenu">
+  <%= link_to owner_present_path(present) do %>
+    <span class="ownerbtn <%= "activeownerbtn" unless current_page?(check_present_path(present))%>">
+      集計結果
+    </span>
+  <% end %>
+  <%= link_to check_present_path(present) do %>
+    <span class="ownerbtn <%= "activeownerbtn" if current_page?(check_present_path(present))%>">
+      チェック済み
+    </span>
+  <% end %>
+</div>
