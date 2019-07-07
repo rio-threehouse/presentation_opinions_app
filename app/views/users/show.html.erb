@@ -24,9 +24,12 @@
                 <%= link_to '削除', present_path(present), class: 'delete-btn', method: :delete, data: {confirm: "この報告内容に関連する投稿が全て削除されます。本当に削除しますか？"} %>
               </span>
               <h4 class="present-title"><%= present.title %></h4>
-              <div class='small-btn2 text-center'>
-                集計結果 <%= present.comments.count %>
+
+              <div>
+                集計結果 <span class="a-count"><%= present.comments.count %></span>
+                チェック <span class="a-count"><%= current_user.check_comments.where(present_id: present.id).count %></span>
               </div>
+              
             </div>
           </div>
         </li>  

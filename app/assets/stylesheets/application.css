@@ -419,15 +419,11 @@ footer {
   background: #ffffff;
 }
 
-/* ポジションなし */
-.small-btn2 {
-  width: 90%;
-  margin: 2% 5%;
-
-  color: #ffffff;
-  background: #a82b5d;
-  border: 2px solid #a82b5d;
-  border-radius: 10px;
+/* ユーザページカウント */
+.a-count {
+  color: #8b1c48;
+  margin: 0 20px 0 5px;
+  font-size: 18px;
 }
   
 
@@ -582,4 +578,18 @@ footer {
 
 .checked {
   color: #8b1c48;
+}
+
+/* 今日の報告会 */
+.todaytitle {
+  background: #efefef;
+  color: #8b1c48;
+  font-size: 15px;
+  padding: 5px 0 3px 0;
+}
+
+.todaymains {
+  height: 17px;
+  border-top: 1px solid #8b1c48;
+  background: #efefef;
 }
