@@ -14,8 +14,9 @@
             <% end %>
           </li>
           <li>
-            <%= link_to logout_path, method: :delete do %>
+            <%= link_to logout_path, method: :delete, data: {confirm: 'ログアウトしますか'} do %>
               <i class="fas fa-sign-out-alt"></i> ログアウト
+
              <% end %>
           </li>
         </ul>
