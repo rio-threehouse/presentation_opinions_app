@@ -116,6 +116,11 @@ header {
   box-shadow: 0 2px 3px #d6d6d6;
 }
 
+.dropdown-menu>li>a {
+  color: #8b1c48;
+  padding: 5px 20px;
+}
+
 .logo {
   margin: 10px 0 10px 5%;
   width: 100px;
