@@ -39,14 +39,15 @@
 
 <% else %>
   <%# トップページ(ログイン前)   %>
-  <div class="cover">
-    <div class="cover-inner">
-    </div>
-  </div>
   <div class="container">
+    <div class="text-center topimg">
+      <img src="/images/JIYUtop.png" alt="報告会アンケート" class="toplogo animated fadeIn">
+      <img src="/images/JIYUtop2.png" alt="" class="toplogo animated fadeInLeft animelate1">
+      <h4 class="jiyucolor topfont animated fadeIn animelate2">卒業勉強・卒業研究 / 生活経営実習</h4>
+    </div>
     <div class="text-center">
-      <%= link_to 'アカウント登録', signup_path, class: 'button nomal-btn' %>
-      <%= link_to 'ログイン', login_path, class: 'button nomal-btn'%>
+      <%= link_to 'アカウント登録', signup_path, class: 'button top-btn' %>
+      <%= link_to 'ログイン', login_path, class: 'button top-btn'%>
     </div>
   </div>
 <% end %>

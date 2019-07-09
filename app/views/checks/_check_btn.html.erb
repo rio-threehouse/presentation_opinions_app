@@ -1,7 +1,7 @@
 <% if current_user.check?(comment) %>
   <%= form_for(current_user.checks.find_by(comment_id: comment.id), html: { method: :delete }) do |f| %>
     <%= hidden_field_tag :comment_id, comment.id %>
-    <%= button_tag type: 'submit', class: 'checkbtn checked' do %>
+    <%= button_tag type: 'submit', class: 'checkbtn jiyucolor' do %>
       <i class="fas fa-check-circle"></i>
     <% end %>
   <% end %>

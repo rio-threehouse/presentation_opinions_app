@@ -22,20 +22,44 @@ body {
   background-image: none;
 }
 
-/* cover */
-.cover {
-  margin-top: -10px;
-  margin-bottom: 20px;
-  width: 100%;
-  height: 300px;
-  background: url("/images/back.png") center center no-repeat;
-  background-size: cover;
+.topimg {
+  margin-top: 50px;
 }
 
-.cover .cover-inner {
-  height: 100%;
-  margin: auto;
-  display: table;
+.toplogo {
+  width: 140px;
+  margin: 0 5px;
+}
+
+.animelate1 {
+  animation-delay: 0.5s;
+}
+
+.animelate2 {
+  animation-delay: 1s;
+}
+
+.topfont {
+  margin: 20px 0 50px 0;
+  font-weight: bold;
+}
+
+.top-btn {
+  color: #8b1c48;
+  background: #efefef;
+  border: 3px solid #8b1c48;
+  padding: 10px 16px;
+  margin: 10px 20px;
+  border-radius: 2px;
+}
+
+.top-btn:hover {
+  color: #fff;
+  background: #8b1c48;
+  border: 3px solid #8b1c48;
+  padding: 10px 16px;
+  margin: 10px 20px;
+  border-radius: 2px;
 }
 
 /* リンク */
@@ -535,24 +559,32 @@ footer {
 .answer {
   font-size: 14px;
   padding: 3px 15px;
-  color: #808080;
-  border: 2px solid #808080;
+  color: #707070;
+  border: 2px solid #707070;
   border-radius: 5px;
-  animation: answer 2s infinite;
+  animation: answer 2.5s infinite;
 }
 
 @keyframes answer {
   0% {
-    color: #808080;
-    border: 2px solid #808080;
+    color: #707070;
+    border: 2px solid #707070;
+  } 
+  25% {
+    color: #a75073;
+    border: 2px solid #bd3f71;
   } 
   50% {
-    color: #b33467;
-    border: 2px solid #b33467;
+    color: #be004c;
+    border: 2px solid #be004c;
+  }
+  75% {
+    color: #bd3f71;
+    border: 2px solid #bd3f71;
   } 
   100% {
-    color: #808080;
-    border: 2px solid #808080;
+    color: #707070;
+    border: 2px solid #707070;
   }
 }
 
@@ -576,7 +608,7 @@ footer {
   color: #bebebe;
 }
 
-.checked {
+.jiyucolor {
   color: #8b1c48;
 }
 
