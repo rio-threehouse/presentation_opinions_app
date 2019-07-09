@@ -3,24 +3,25 @@
     <div class="content">
       <%= link_to '', main, class: 'linkbox' %>
       
-      <span class="text-muted">
-        <%= main.date.strftime('%Y/%m/%d') %>
-        <i class="far fa-clock"></i> <%= main.time %>
-      </span>
-      
-      <span class="main-group">
+      <div class="maingroup">
         <% if main.group == '0' %>
           <span class='group-0'>卒業勉強・卒業研究</span>
         <% else %>
           <span class='group-1'>生活経営研究実習</span>
         <% end %>
-        <h4 class='main-title'>
-          <% if main.date == Date.today %>
-            <span class="arrow"><i class="fas fa-arrow-right faa-horizontal animated"></i></span> 
-          <% end %>
-          <%= main.title %>
-        </h4>
+      </div>
+      
+      <span class="text-muted">
+        <%= main.date.strftime('%Y/%m/%d') %>
+        <i class="far fa-clock"></i> <%= main.time %>
       </span>
+      
+      <h4 class='main-title'>
+        <% if main.date == Date.today %>
+          <span class="arrow"><i class="fas fa-arrow-right faa-horizontal animated"></i></span> 
+        <% end %>
+        <%= main.title %>
+      </h4>
 
       <% if main.user == current_user %>
         <div style="text-align: right">

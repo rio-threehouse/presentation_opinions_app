@@ -22,6 +22,7 @@ body {
   background-image: none;
 }
 
+/* トップページデザイン */
 .topimg {
   margin: 20px 0;
   padding: 50px 0 25px 0;
@@ -33,6 +34,7 @@ body {
   margin: 0 5px;
 }
 
+/* アニメーション */
 .animelate1 {
   animation-delay: 0.5s;
 }
@@ -79,10 +81,8 @@ a:hover {
 
 /* ページタイトル */
 .pagetitle {
-  font-weight: 400;
   margin-bottom: 10px;
-  padding: 10px 10px; 
-  border-radius: 5px;
+  padding: 5px 10px; 
 }
 
 .nomaltilte {
@@ -113,7 +113,7 @@ a:hover {
 header {
   background: #ffffff;
   margin-bottom: 10px;
-  border-bottom: 0.5px solid #d6d6d6;
+  box-shadow: 0 2px 3px #d6d6d6;
 }
 
 .logo {
@@ -360,26 +360,22 @@ footer {
   border-radius:15px;		
 }
 
-/* mainのデザイン */
-/* .main-group {
-  margin-top:10px;
-} */
+.maingroup {
+  margin-bottom: 10px;
+  margin-left: -10px;
+}
 
 .group-0 {
   color: #fff;
   background: #509bad;
-  padding: 5px;
-  margin-left: 10px;
-  border-radius: 5px;
+  padding: 5px 30px;
   font-size: 12px;
 } 
 
 .group-1 {
   color: #fff;
   background: #ccbb72;
-  padding: 5px;
-  margin-left: 10px;
-  border-radius: 5px;
+  padding: 5px 30px;
   font-size: 12px;
 }
 

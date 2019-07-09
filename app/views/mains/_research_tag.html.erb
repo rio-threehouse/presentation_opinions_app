@@ -1,11 +1,11 @@
 <%# ゼミ別タグ %>
-<span class="<% if present.user.research == 'フィールドサイエンス' %>
+<span class="<% if present.research == 'フィールドサイエンス' %>
               field
-            <% elsif present.user.research == 'ヒューマンサイエンス' %>
+            <% elsif present.research == 'ヒューマンサイエンス' %>
               human
-            <% elsif present.user.research == 'データサイエンス' %>
+            <% elsif present.research == 'データサイエンス' %>
               data
-            <% elsif present.user.research == 'ライフスタイル' %>
+            <% elsif present.research == 'ライフスタイル' %>
               life
             <% else %>
               manage
