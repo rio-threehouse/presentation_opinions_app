@@ -23,11 +23,13 @@ body {
 }
 
 .topimg {
-  margin-top: 50px;
+  margin: 20px 0;
+  padding: 50px 0 25px 0;
+  background-image: linear-gradient(130deg, #efefef 30%, #ffffff 30%, #ffffff 70%, #efefef 70%);
 }
 
 .toplogo {
-  width: 140px;
+  width: 130px;
   margin: 0 5px;
 }
 
@@ -40,13 +42,12 @@ body {
 }
 
 .topfont {
-  margin: 20px 0 50px 0;
+  margin: 20px 0 60px 0;
   font-weight: bold;
 }
 
 .top-btn {
   color: #8b1c48;
-  background: #efefef;
   border: 3px solid #8b1c48;
   padding: 10px 16px;
   margin: 10px 20px;
