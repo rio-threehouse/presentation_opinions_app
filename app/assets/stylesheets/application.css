@@ -36,10 +36,14 @@ body {
 
 /* アニメーション */
 .animelate1 {
-  animation-delay: 0.5s;
+  animation-delay: 0.1s;
 }
 
 .animelate2 {
+  animation-delay: 0.6s;
+}
+
+.animelate3 {
   animation-delay: 1s;
 }
 
