@@ -63,3 +63,5 @@ group :production do
 end
 
 gem 'gretel'
+
+gem 'dotenv-rails'

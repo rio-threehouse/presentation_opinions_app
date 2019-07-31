@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   before_action :require_user_logged_in, only:[:edit, :update, :destroy]
   before_action :user_correct_user, only:[:show]
+  before_action :digest_authentication, only:[:new]
+  REALM = 'SecretZone'.freeze
+  USERS = { ENV["DIGEST_AUTH_NAME"] => Digest::MD5.hexdigest([ENV["DIGEST_AUTH_NAME"], REALM, ENV["DIGEST_AUTH_PASSWORD"]].join(':'))}.freeze
 
   def new
     @user = User.new
@@ -42,6 +45,12 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def digest_authentication
+    authenticate_or_request_with_http_digest(REALM) do |username|
+      USERS[username]
+    end
+  end
 
   def user_params
     params.require(:user).permit(:name, :name_read, :research, :password, :password_confirmation)
