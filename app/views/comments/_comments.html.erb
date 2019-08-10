@@ -14,7 +14,9 @@
           <%= simple_format(comment.comment) %>
         </div>
         <% if present.user == current_user || current_user.research == 'teacher' %>
-          <%= render 'checks/check_btn', comment: comment %>
+          <div id="checks_btn_<%= comment.id %>">
+            <%= render 'checks/check_btn', comment: comment %>
+          </div>
         <% end %>
       </div>
     </li>
