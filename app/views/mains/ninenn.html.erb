@@ -1,0 +1,28 @@
+<%# 2年課程 %>
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <div class="pagetitle zemitiltepage">
+      <span style="font-size: 12px">
+        <%= @main.date.strftime('%Y/%m/%d') %>
+        <i class="far fa-clock"></i> <%= @main.time %>
+      </span>
+      <div class="zemititle  text-center">
+        <%=  @main.title %>
+      </div>
+    </div>
+    <%# <div class="panel-body text-center">
+      <li><i class="fas fa-plus group-0-btn"></i> を押して報告内容を登録・変更する</li>
+    </div> %>
+
+    <%= render'mains/research_btn', main: @main %>
+    <div class="panel-body">
+      <%= render 'presents/presents', presents: @ninenn_presents, main: @main %>        
+    </div>
+  </div>
+</div>
+
+<% if @current_user_present %>
+  <%= render 'presents/present_form', present: @current_user_present, main: @main %>
+<% else %>
+  <%= render 'presents/present_form', present: @present, main: @main %>
+<% end %>

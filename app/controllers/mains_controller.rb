@@ -8,6 +8,11 @@ class MainsController < ApplicationController
     show_data
   end
 
+  def ninenn
+    show_data
+    @ninenn_presents = @presents.where(research: '2年課程').order("name_read")
+  end
+
   def field
     show_data
     @field_presents = @presents.where(research: 'フィールドサイエンス').order("name_read")

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :mains, only: [:show, :create, :edit, :update, :destroy] do
     member do
+      get :ninenn
       get :field
       get :human
       get :data

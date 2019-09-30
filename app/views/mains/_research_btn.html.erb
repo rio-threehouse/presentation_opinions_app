@@ -5,6 +5,11 @@
       全て
     </span>
   <% end %>
+  <%= link_to ninenn_main_path(main) do %>
+    <span class="<%= 'ninenn' if current_page?(ninenn_main_path(main)) %> button select-btn">
+      2年課程
+    </span><br>
+  <% end %>
   <%= link_to field_main_path(main) do %>
     <span class="<%= 'field' if current_page?(field_main_path(main)) %> button select-btn">
       フィールド

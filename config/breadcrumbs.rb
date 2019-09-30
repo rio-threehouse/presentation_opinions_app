@@ -2,6 +2,11 @@ crumb :main do |main|
   link main.title, main_path(main)
 end
 
+crumb :main_ninenn do |main|
+  link '2年課程', ninenn_main_path(main)
+  parent :main, main
+end
+
 crumb :main_field do |main|
   link 'フィールド', field_main_path(main)
   parent :main, main
@@ -29,8 +34,9 @@ end
 
 crumb :present do |present|
   link 'アンケート', present_path(present)
-
-  if present.research == 'フィールドサイエンス'
+  if present.research == '2年課程'
+    parent :main_ninenn, present.main
+  elsif present.research == 'フィールドサイエンス'
     parent :main_field, present.main
   elsif present.research == 'ヒューマンサイエンス'
     parent :main_human, present.main
