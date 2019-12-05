@@ -48,7 +48,9 @@ class MainsController < ApplicationController
       flash[:success] = '報告会を追加しました'
       redirect_to root_url
     else
-      @mains = Main.all.order("date DESC").page(params[:page]).per(8)
+      @main = current_user.mains.build
+      @mains = Main.where.not(date: Date.today).order("date DESC").page(params[:page]).per(8)
+      @today_mains = Main.where(date: Date.today)
       flash[:danger] = '報告会の追加に失敗しました'
       render 'toppages/index'
     end
